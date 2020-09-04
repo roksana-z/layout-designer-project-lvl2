@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import "./variables.scss";
+@import "./atomic.scss";
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.fd-row {
+    flex-direction: row;
+}
+
+.mr-100 {
+    margin-right: 100px;
+}
+
+.ml-300 {
+    margin-left: 300px;
+}
+
+.h-30 {
+    height: 30px;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.logo-box {
+    @extend %logo-box;
+}
+
+.main-container {
+    background-image: url(../../images/banner.png);
+    background-size: 100%;
+    background-position: center;
+}
+header ul {
+    @extend %horizontal-menu;
+}
+
+header input {
+    @extend %search;
+}
+
+.footer {
+    @extend %footer;
+}

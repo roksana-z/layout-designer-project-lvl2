@@ -1,0 +1,108 @@
+@import "./variables.scss";
+
+%flex-element-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+%uppercase {
+    text-transform: uppercase;
+}
+
+%d-flex {
+    display: flex;
+}
+
+%a {
+    text-decoration: none;
+        &:hover {
+            color: $white;
+        }
+}
+
+%logo-box {
+    @extend %d-flex;
+    @extend %uppercase;
+    color: $white;
+    font-weight: bold;
+    align-items: center;
+    & img {
+        height: 17px;
+    }
+}
+
+%horizontal-menu {
+    @extend %d-flex;
+    @extend %uppercase;
+    color: $dark-grey;
+    font-weight: bold;
+    font-size: 11px;
+    flex-direction: row;
+    list-style-type: none;
+    & a {
+        margin-right: 36px;
+        @extend %a;
+    }
+}
+
+%search {
+    @extend %d-flex;
+    width: 278px;
+    background: #3C3B3D;
+    border-radius: 50px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+
+%footer {
+    @extend %d-flex;
+    background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
+    height: 486px;
+    color: $light-grey;
+    flex-direction: column;
+    align-items: center;
+    & .info-box {
+        @extend %d-flex;
+        flex-direction: row;
+        margin-top: 80px;
+        & h2 {
+            margin-bottom: 10px;
+        }
+        & ul {
+            list-style-type: none;
+        }
+        & ul li {
+            margin-top: 20px;
+        }
+        & ul a, img {
+            color: $light-grey;
+            margin-top: 20px;
+            @extend %a;
+        }
+        & div {
+            margin-right: 100px;
+        }
+        & div img {
+            margin-right: 21px;
+            height: 17px;
+        }
+    }
+    & hr {
+        margin-top: 100px;
+        width: 100%;
+    }
+    & .horizontal-info {
+        @extend %d-flex;
+        margin-top: 50px;
+        flex-direction: row;
+        list-style-type: none;
+        align-items: flex-start;
+        width: 1163px;
+        & a {
+            @extend %a;
+            color: $light-grey;
+            margin-right: 40px;
+        }
+    }
+}

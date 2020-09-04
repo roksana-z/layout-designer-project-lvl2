@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+header ul, .logo-box {
+  text-transform: uppercase;
+}
+
+.footer .horizontal-info, .footer .info-box, .footer, header input, header ul, .logo-box {
+  display: flex;
+}
+
+.footer .horizontal-info a, .footer .info-box ul a, .footer .info-box img, header ul a {
+  text-decoration: none;
+}
+.footer .horizontal-info a:hover, .footer .info-box ul a:hover, .footer .info-box img:hover, header ul a:hover {
+  color: #FFFFFF;
+}
+
+.logo-box {
+  color: #FFFFFF;
+  font-weight: bold;
+  align-items: center;
+}
+.logo-box img {
+  height: 17px;
+}
+
+header ul {
+  color: #808080;
+  font-weight: bold;
+  font-size: 11px;
+  flex-direction: row;
+  list-style-type: none;
+}
+header ul a {
+  margin-right: 36px;
+}
+
+header input {
+  width: 278px;
+  background: #3C3B3D;
+  border-radius: 50px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.footer {
+  background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
+  height: 486px;
+  color: #CACACA;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .info-box {
+  flex-direction: row;
+  margin-top: 80px;
+}
+.footer .info-box h2 {
+  margin-bottom: 10px;
+}
+.footer .info-box ul {
+  list-style-type: none;
+}
+.footer .info-box ul li {
+  margin-top: 20px;
+}
+.footer .info-box ul a, .footer .info-box img {
+  color: #CACACA;
+  margin-top: 20px;
+}
+.footer .info-box div {
+  margin-right: 100px;
+}
+.footer .info-box div img {
+  margin-right: 21px;
+  height: 17px;
+}
+.footer hr {
+  margin-top: 100px;
+  width: 100%;
+}
+.footer .horizontal-info {
+  margin-top: 50px;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: flex-start;
+  width: 1163px;
+}
+.footer .horizontal-info a {
+  color: #CACACA;
+  margin-right: 40px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fd-row {
+  flex-direction: row;
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+
+.ml-300 {
+  margin-left: 300px;
+}
+
+.h-30 {
+  height: 30px;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.main-container {
+  background-image: url(../../images/banner.png);
+  background-size: 100%;
+  background-position: center;
+}
+
+/*# sourceMappingURL=style.css.map */
