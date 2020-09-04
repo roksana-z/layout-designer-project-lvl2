@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-header ul, .logo-box {
+.box-in-baner h3, .box-in-baner h1, .box-in-baner button, header ul, .logo-box {
   text-transform: uppercase;
 }
 
@@ -32,13 +32,13 @@ header ul {
 }
 header ul a {
   margin-right: 36px;
+  font-weight: bold;
 }
 
 header input {
   width: 278px;
   background: #3C3B3D;
   border-radius: 50px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .footer {
@@ -88,6 +88,24 @@ header input {
   margin-right: 40px;
 }
 
+.box-in-baner input {
+  width: 270px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: #FFFFFF;
+}
+
+.box-in-baner button {
+  width: 570px;
+  height: 50px;
+  background: #34C176;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -114,8 +132,16 @@ header input {
   height: 30px;
 }
 
+.h-835 {
+  height: 835px;
+}
+
 .jc-center {
   justify-content: center;
+}
+
+.mr-30 {
+  margin-right: 30px;
 }
 
 .ai-center {
@@ -124,8 +150,34 @@ header input {
 
 .main-container {
   background-image: url(../../images/banner.png);
-  background-size: 100%;
-  background-position: center;
+  height: 877px;
+}
+
+.box-in-baner {
+  width: 1200px;
+  color: #FFFFFF;
+  font-weight: bold;
+  flex-direction: column;
+}
+.box-in-baner h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  text-align: center;
+}
+.box-in-baner h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.box-in-baner p {
+  font-size: 18px;
+  margin-top: 45px;
+  text-align: center;
+}
+.box-in-baner input {
+  margin-top: 40px;
+}
+.box-in-baner button {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

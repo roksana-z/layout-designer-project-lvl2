@@ -14,7 +14,7 @@
     display: flex;
 }
 
-%a {
+%a-hover {
     text-decoration: none;
         &:hover {
             color: $white;
@@ -42,7 +42,8 @@
     list-style-type: none;
     & a {
         margin-right: 36px;
-        @extend %a;
+        font-weight: bold;
+        @extend %a-hover;
     }
 }
 
@@ -51,7 +52,7 @@
     width: 278px;
     background: #3C3B3D;
     border-radius: 50px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    
 }
 
 
@@ -78,7 +79,7 @@
         & ul a, img {
             color: $light-grey;
             margin-top: 20px;
-            @extend %a;
+            @extend %a-hover;
         }
         & div {
             margin-right: 100px;
@@ -100,9 +101,28 @@
         align-items: flex-start;
         width: 1163px;
         & a {
-            @extend %a;
+            @extend %a-hover;
             color: $light-grey;
             margin-right: 40px;
         }
     }
+}
+
+%email-input {
+    width: 270px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: $white;
+}
+
+%access-btn {
+    @extend %uppercase;
+    width: 570px;
+    height: 50px;
+    background: $green;
+    color: $white;
+    font-weight: bold;
 }

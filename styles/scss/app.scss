@@ -28,8 +28,16 @@
     height: 30px;
 }
 
+.h-835 {
+    height: 835px;
+}
+
 .jc-center {
     justify-content: center;
+}
+
+.mr-30 {
+    margin-right: 30px;
 }
 
 .ai-center {
@@ -42,8 +50,8 @@
 
 .main-container {
     background-image: url(../../images/banner.png);
-    background-size: 100%;
-    background-position: center;
+    height: 877px;
+
 }
 header ul {
     @extend %horizontal-menu;
@@ -52,7 +60,37 @@ header ul {
 header input {
     @extend %search;
 }
-
+.box-in-baner {
+    width: 1200px;
+    color: $white;
+    font-weight: bold;
+    flex-direction: column;
+    & h1 {
+        font-family: 'Roboto', sans-serif;
+        @extend %uppercase;
+        font-size: 60px;
+        text-align: center;
+    }
+    & h3 {
+        @extend %uppercase;
+        font-size: 30px;
+        text-align: center;
+    }
+    & p {
+        font-size: 18px;
+        margin-top: 45px;
+        text-align: center;
+    }
+    & input {
+        @extend %email-input;
+        margin-top: 40px;
+    }
+    & button {
+        @extend %access-btn;
+        margin-top: 30px;
+    }
+}
 .footer {
     @extend %footer;
 }
+
