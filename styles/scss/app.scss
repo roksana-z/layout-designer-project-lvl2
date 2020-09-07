@@ -7,7 +7,9 @@
     margin: 0px;
     padding: 0px;
 }
-
+body {
+    background-color: black;
+}
 .d-flex {
     display: flex;
 }
@@ -32,16 +34,54 @@
     height: 835px;
 }
 
+.bc-black {
+    background-color: black;
+}
+
 .jc-center {
     justify-content: center;
 }
-
+.fd-column{
+    flex-direction: column;
+}
 .mr-30 {
     margin-right: 30px;
 }
 
+.mr-73 {
+    margin-right: 73px;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mb-70 {
+    margin-bottom: 70px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.mt-51 {
+    margin-top: 51px;
+}
+
+.w-566 {
+    width: 566px;
+}
+
 .ai-center {
     align-items: center;
+}
+
+.fd-reverse-row {
+    flex-direction: row-reverse;
+}
+
+.mr-68 {
+    margin-right: 68px;
 }
 
 .logo-box {
@@ -94,3 +134,40 @@ header input {
     @extend %footer;
 }
 
+.subscribe {
+    background-color: black;
+    & div .subscribe-box {
+        @extend %subscribe-box;
+    }
+    & div .one {
+        background: url("../../images/subscribe_1.png");
+    }
+    & div .two {
+        background: url("../../images/subscribe_2.png");
+    }
+    & div .three {
+        background: url("../../images/subscribe_3.png");
+    }
+
+    & h2 {
+        @extend %main-titels;
+    }
+    & p {
+        color: $white;
+        text-align: center;
+        font-size: 22px;
+        width: 1200px;
+    }
+}
+
+.box {
+    & h2 {
+        @extend %main-titels;
+    }
+    & .artist-box {
+        @extend %artist-box;
+    }
+    & .mob-app {
+        @extend %mob-app;
+    }
+}

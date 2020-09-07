@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-.box-in-baner h3, .box-in-baner h1, .box-in-baner button, header ul, .logo-box {
+.box-in-baner h3, .box-in-baner h1, .box .artist-box .album button, .box .artist-box .album div p, .box h2, .subscribe h2, .subscribe div .subscribe-box button, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, .logo-box {
   text-transform: uppercase;
 }
 
-.footer .horizontal-info, .footer .info-box, .footer, header input, header ul, .logo-box {
+.box .mob-app .mob-app-text, .box .artist-box .album div, .box .artist-box .album, .box .artist-box, .subscribe div .subscribe-box .box-price, .subscribe div .subscribe-box, .footer .horizontal-info, .footer .info-box, .footer, header input, header ul, .logo-box {
   display: flex;
 }
 
@@ -106,10 +106,119 @@ header input {
   font-weight: bold;
 }
 
+.subscribe div .subscribe-box {
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 580px;
+}
+.subscribe div .subscribe-box h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  margin-bottom: 223px;
+  margin-top: 25px;
+}
+.subscribe div .subscribe-box .box-price {
+  color: #FFFFFF;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  width: 110px;
+}
+.subscribe div .subscribe-box .box-price .price {
+  font-size: 60px;
+}
+.subscribe div .subscribe-box .box-price .rub {
+  font-size: 30px;
+}
+.subscribe div .subscribe-box button {
+  width: 300px;
+  height: 70px;
+  border: 4px solid #FFFFFF;
+  box-sizing: border-box;
+  background-color: unset;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-bottom: 36px;
+}
+.subscribe div .subscribe-box p {
+  width: 300px;
+  margin-bottom: 60px;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.box h2, .subscribe h2 {
+  color: #FFFFFF;
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+
+.box .artist-box .album {
+  width: 566px;
+  flex-direction: column;
+}
+.box .artist-box .album h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #FFFFFF;
+}
+.box .artist-box .album p {
+  color: #CACACA;
+  font-size: 14px;
+  line-height: 35px;
+}
+.box .artist-box .album div {
+  align-items: center;
+  margin-bottom: 45px;
+}
+.box .artist-box .album div p {
+  color: #F89202;
+  font-size: 12px;
+}
+.box .artist-box .album div p span {
+  color: #555555;
+}
+.box .artist-box .album button {
+  width: 129.14px;
+  height: 50px;
+  border: 1px solid #E9E9E9;
+  background-color: unset;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.box .mob-app button {
+  width: 173.76px;
+  height: 50px;
+  background: #FF4157;
+  border-radius: 50px;
+}
+
+.box .mob-app {
+  display: flex;
+}
+.box .mob-app p {
+  color: #808080;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.box .mob-app .mob-app-text {
+  width: 566px;
+  flex-direction: column;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  background-color: black;
 }
 
 .d-flex {
@@ -136,16 +245,56 @@ header input {
   height: 835px;
 }
 
+.bc-black {
+  background-color: black;
+}
+
 .jc-center {
   justify-content: center;
+}
+
+.fd-column {
+  flex-direction: column;
 }
 
 .mr-30 {
   margin-right: 30px;
 }
 
+.mr-73 {
+  margin-right: 73px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mt-51 {
+  margin-top: 51px;
+}
+
+.w-566 {
+  width: 566px;
+}
+
 .ai-center {
   align-items: center;
+}
+
+.fd-reverse-row {
+  flex-direction: row-reverse;
+}
+
+.mr-68 {
+  margin-right: 68px;
 }
 
 .main-container {
@@ -178,6 +327,30 @@ header input {
 }
 .box-in-baner button {
   margin-top: 30px;
+}
+
+.subscribe {
+  background-color: black;
+}
+.subscribe div .one {
+  background: url("../../images/subscribe_1.png");
+}
+.subscribe div .two {
+  background: url("../../images/subscribe_2.png");
+}
+.subscribe div .three {
+  background: url("../../images/subscribe_3.png");
+}
+.subscribe p {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  width: 1200px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+  max-width: 1000px;
 }
 
 /*# sourceMappingURL=style.css.map */
