@@ -38,18 +38,21 @@
     color: $dark-grey;
     font-weight: bold;
     font-size: 11px;
-    flex-direction: row;
     list-style-type: none;
+    & li {
+        margin-right: 10%;
+    }
     & a {
-        margin-right: 36px;
-        font-weight: bold;
         @extend %a-hover;
+    }
+    @media (max-width: 1024px) {
+            flex-direction: column;
     }
 }
 
 %search {
     @extend %d-flex;
-    width: 278px;
+    width: 22%;
     background: #3C3B3D;
     border-radius: 50px;
     
@@ -59,15 +62,18 @@
 %footer {
     @extend %d-flex;
     background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
-    height: 486px;
+
     color: $light-grey;
     flex-direction: column;
     align-items: center;
-    & .info-box {
+    & .menu1 {
         @extend %d-flex;
         flex-direction: row;
-        margin-top: 80px;
+        width: 90%;
+        flex-wrap: wrap;
+        
         & h2 {
+            margin-top: 80px;
             margin-bottom: 10px;
         }
         & ul {
@@ -82,10 +88,10 @@
             @extend %a-hover;
         }
         & div {
-            margin-right: 100px;
+            margin-right: 8%;
         }
         & div img {
-            margin-right: 21px;
+            margin-right: 4%;
             height: 17px;
         }
     }
@@ -93,23 +99,26 @@
         margin-top: 100px;
         width: 100%;
     }
-    & .horizontal-info {
+    & .menu2 {
         @extend %d-flex;
         margin-top: 50px;
         flex-direction: row;
         list-style-type: none;
         align-items: flex-start;
-        width: 1163px;
+        width: 90%;
         & a {
             @extend %a-hover;
+            display: flex;
             color: $light-grey;
-            margin-right: 40px;
+        }
+        & li {
+            margin-right: 3%;
         }
     }
 }
 
 %email-input {
-    width: 270px;
+    width: 22%;
     height: 50px;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.1);
@@ -120,7 +129,7 @@
 
 %access-btn {
     @extend %uppercase;
-    width: 570px;
+    width: 46%;
     height: 50px;
     background: $green;
     color: $white;
@@ -131,7 +140,7 @@
     @extend %d-flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    width: 30%;
     height: 580px;
     & h2 {
         color: $white;
@@ -145,7 +154,7 @@
         @extend %d-flex;
         align-items: flex-start;
         margin-bottom: 40px;
-        width: 110px;
+      
         & .price {
             font-size: 60px;
         }
@@ -154,7 +163,7 @@
         }
     }
     & button {
-        width: 300px;
+        width: 80%;
         height: 70px;
 
         border: 4px solid #FFFFFF;
@@ -166,7 +175,7 @@
         margin-bottom: 36px;
     }
     & p {
-        width: 300px;
+        width: 80%;
         margin-bottom: 60px;
         font-size: 11px;
         line-height: 13px;
@@ -180,15 +189,27 @@
     @extend %uppercase;
     color: $white;
     font-size: 38px;
-    margin-bottom: 50px;
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 }
 
 %artist-box {
     @extend %d-flex;
+    & .artist {
+        width: 50%;
+        @media (max-width: 1024px) {
+            width: 80%;
+        }
+    }
     & .album {
         @extend %d-flex;
-        width: 566px;
+        width: 50%;
+        @media (max-width: 1024px) {
+            width: 80%;
+        }
         flex-direction: column;
+        
         & h3 {
         font-size: 30px;
         margin-bottom: 25px;
@@ -203,17 +224,23 @@
             @extend %d-flex;
             align-items: center;
             margin-bottom: 45px;
-            & p {
+            & .orange {
                 @extend %uppercase;
                 color: $orange;
                 font-size: 12px;
-                span {
-                    color: $dark;
-                }
+                margin-right: 3%;
+                margin-left: 2%;
+            }
+            .divider {
+                color: $light-grey;
+                margin-right: 3%;
+            }
+            .date {
+                color: $light-grey;
             }
         }
         & button {
-            width: 129.14px;
+            width: 20%;
             height: 50px;
             border: 1px solid #E9E9E9;
             background-color: unset;
@@ -224,10 +251,14 @@
             color: $dark;
         }
     }
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
 
 %pink-btn {
-    width: 173.76px;
+    width: 27%;
     height: 50px;
     background: #FF4157;
     border-radius: 50px;
@@ -235,17 +266,17 @@
 
 %mob-app {
     display: flex;
-
     & p {
         color: $dark-grey;
         font-size: 16px;
         margin-bottom: 25px;
+        line-height: 19px;
     }
     & button {
         @extend %pink-btn;
     }
     & .mob-app-text {
-        width: 566px;
+        width: 44%;
         @extend %d-flex;
         flex-direction: column;
     }

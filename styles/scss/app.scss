@@ -7,28 +7,34 @@
     margin: 0px;
     padding: 0px;
 }
+
 body {
     background-color: black;
 }
+
 .d-flex {
     display: flex;
 }
 
 .fd-row {
     flex-direction: row;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 }
 
 .mr-100 {
-    margin-right: 100px;
+    margin-right: 8%;
+    @media (max-width: 768px) {
+        margin-right: 0px;
+    }   
 }
 
-.ml-300 {
-    margin-left: 300px;
+.ml-23 {
+    margin-left: 23%;
 }
 
-.h-30 {
-    height: 30px;
-}
+
 
 .h-835 {
     height: 835px;
@@ -41,21 +47,30 @@ body {
 .jc-center {
     justify-content: center;
 }
+
 .fd-column{
     flex-direction: column;
 }
+
 .mr-30 {
-    margin-right: 30px;
+    margin-right: 2%;
 }
 
 .mr-73 {
-    margin-right: 73px;
+    margin-right: 6%;
 }
 
 .mt-100{
     margin-top: 100px;
 }
 
+.w-30p {
+    width: 30%;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
 .mb-70 {
     margin-bottom: 70px;
 }
@@ -69,7 +84,11 @@ body {
 }
 
 .w-566 {
-    width: 566px;
+    width: 50%;
+}
+
+.pt-30 {
+    padding-top: 30px;
 }
 
 .ai-center {
@@ -81,30 +100,55 @@ body {
 }
 
 .mr-68 {
-    margin-right: 68px;
+    margin-right: 5%;
 }
 
 .logo-box {
     @extend %logo-box;
 }
 
+.w-100p {
+    width: 100%;
+}
+
 .main-container {
     background-image: url(../../images/banner.png);
-    height: 877px;
-
-}
-header ul {
-    @extend %horizontal-menu;
+    height: 865px;
 }
 
-header input {
-    @extend %search;
+header {
+    & ul {
+        @extend %horizontal-menu;
+    }
+    & input {
+        @extend %search;
+    }
+    @media (max-width: 1024px) {
+        align-items: flex-start!important;
+        padding-left: 2%;
+        div {
+            margin-bottom: 25px;
+            order: 1;
+        }
+        ul {
+            order: 3;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        input {
+            margin-left: 0px!important;
+            margin-bottom: 25px;
+            order: 2;
+        }
+    }
 }
+
 .box-in-baner {
-    width: 1200px;
     color: $white;
     font-weight: bold;
     flex-direction: column;
+    justify-content: center;
     & h1 {
         font-family: 'Roboto', sans-serif;
         @extend %uppercase;
@@ -125,13 +169,45 @@ header input {
         @extend %email-input;
         margin-top: 40px;
     }
+    @media (max-width: 768px) {
+        & h1 {
+            font-size: 30px;
+        }
+        & h3 {
+            font-size: 18px;
+        }
+        & p {
+            font-size: 12px;
+        }
+        & .input-container {
+            align-items: center;
+            flex-direction: column;
+        }
+        & input, button {
+            width: 80%;
+            margin-right: 0px;
+        }
+
+    }
     & button {
         @extend %access-btn;
         margin-top: 30px;
     }
 }
+
 .footer {
     @extend %footer;
+    @media (max-width: 768px) {
+        .menu1 {
+            flex-direction: column;
+        }
+        .menu2 {
+            flex-direction: column;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .subscribe {
@@ -141,27 +217,49 @@ header input {
     }
     & div .one {
         background: url("../../images/subscribe_1.png");
+        background-repeat: no-repeat;
     }
     & div .two {
         background: url("../../images/subscribe_2.png");
+        background-repeat: no-repeat;
     }
     & div .three {
         background: url("../../images/subscribe_3.png");
+        background-repeat: no-repeat;
     }
 
-    & h2 {
+    & .h2-title {
         @extend %main-titels;
     }
     & p {
         color: $white;
         text-align: center;
         font-size: 22px;
-        width: 1200px;
     }
+    @media (max-width: 768px) {
+        .rate-info {
+            font-size: 12px;
+        }
+        .subscribe-container {
+            flex-direction: column;
+            width: 80%;
+            align-items: center;
+            .subscribe-box {
+                width: 60%;
+                margin-right: 0px;
+                margin-bottom: 50px;
+                & h2 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
 }
 
+
 .box {
-    & h2 {
+    & .h2-title {
         @extend %main-titels;
     }
     & .artist-box {
@@ -170,4 +268,37 @@ header input {
     & .mob-app {
         @extend %mob-app;
     }
+
+    @media (max-width: 768px) {
+        .h2-title {
+            font-size: 20px;
+            margin-top: 45px;
+        }
+        .artist-box {
+            img {
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+            & .album button {
+                width: 100%;
+            }
+        }
+        .mob-app {
+            flex-direction: column;
+            width: 80%;
+            align-items: center;
+            & .mob-img {
+                order: 1;
+            }
+            & .mob-app-text {
+                order: 2;
+                width: 100%;
+                margin-right: 0px;
+                & button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
 }

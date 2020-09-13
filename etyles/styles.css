@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-.box-in-baner h3, .box-in-baner h1, .box .artist-box .album button, .box .artist-box .album div .orange, .box .h2-title, .subscribe .h2-title, .subscribe div .subscribe-box button, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, .logo-box {
+.box-in-baner h3, .box-in-baner h1, .box .artist-box .album button, .box .artist-box .album div p, .box h2, .subscribe h2, .subscribe div .subscribe-box button, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, .logo-box {
   text-transform: uppercase;
 }
 
-.box .mob-app .mob-app-text, .box .artist-box .album div, .box .artist-box .album, .box .artist-box, .subscribe div .subscribe-box .box-price, .subscribe div .subscribe-box, .footer .menu2, .footer .menu1, .footer, header input, header ul, .logo-box {
+.box .mob-app .mob-app-text, .box .artist-box .album div, .box .artist-box .album, .box .artist-box, .subscribe div .subscribe-box .box-price, .subscribe div .subscribe-box, .footer .horizontal-info, .footer .info-box, .footer, header input, header ul, .logo-box {
   display: flex;
 }
 
-.footer .menu2 a, .footer .menu1 ul a, .footer .menu1 img, header ul a {
+.footer .horizontal-info a, .footer .info-box ul a, .footer .info-box img, header ul a {
   text-decoration: none;
 }
-.footer .menu2 a:hover, .footer .menu1 ul a:hover, .footer .menu1 img:hover, header ul a:hover {
+.footer .horizontal-info a:hover, .footer .info-box ul a:hover, .footer .info-box img:hover, header ul a:hover {
   color: #FFFFFF;
 }
 
@@ -27,76 +27,74 @@ header ul {
   color: #808080;
   font-weight: bold;
   font-size: 11px;
+  flex-direction: row;
   list-style-type: none;
 }
-header ul li {
-  margin-right: 10%;
+header ul a {
+  margin-right: 36px;
+  font-weight: bold;
 }
 @media (max-width: 1024px) {
   header ul {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 
 header input {
-  width: 22%;
+  width: 278px;
   background: #3C3B3D;
   border-radius: 50px;
 }
 
 .footer {
   background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
+  height: 486px;
   color: #CACACA;
   flex-direction: column;
   align-items: center;
 }
-.footer .menu1 {
+.footer .info-box {
   flex-direction: row;
-  width: 90%;
-  flex-wrap: wrap;
-}
-.footer .menu1 h2 {
   margin-top: 80px;
+}
+.footer .info-box h2 {
   margin-bottom: 10px;
 }
-.footer .menu1 ul {
+.footer .info-box ul {
   list-style-type: none;
 }
-.footer .menu1 ul li {
+.footer .info-box ul li {
   margin-top: 20px;
 }
-.footer .menu1 ul a, .footer .menu1 img {
+.footer .info-box ul a, .footer .info-box img {
   color: #CACACA;
   margin-top: 20px;
 }
-.footer .menu1 div {
-  margin-right: 8%;
+.footer .info-box div {
+  margin-right: 100px;
 }
-.footer .menu1 div img {
-  margin-right: 4%;
+.footer .info-box div img {
+  margin-right: 21px;
   height: 17px;
 }
 .footer hr {
   margin-top: 100px;
   width: 100%;
 }
-.footer .menu2 {
+.footer .horizontal-info {
   margin-top: 50px;
   flex-direction: row;
   list-style-type: none;
   align-items: flex-start;
-  width: 90%;
+  width: 1163px;
 }
-.footer .menu2 a {
-  display: flex;
+.footer .horizontal-info a {
   color: #CACACA;
-}
-.footer .menu2 li {
-  margin-right: 3%;
+  margin-right: 40px;
 }
 
 .box-in-baner input {
-  width: 22%;
+  width: 270px;
   height: 50px;
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -106,7 +104,7 @@ header input {
 }
 
 .box-in-baner button {
-  width: 46%;
+  width: 570px;
   height: 50px;
   background: #34C176;
   color: #FFFFFF;
@@ -129,6 +127,7 @@ header input {
   color: #FFFFFF;
   align-items: flex-start;
   margin-bottom: 40px;
+  width: 110px;
 }
 .subscribe div .subscribe-box .box-price .price {
   font-size: 60px;
@@ -137,7 +136,7 @@ header input {
   font-size: 30px;
 }
 .subscribe div .subscribe-box button {
-  width: 80%;
+  width: 300px;
   height: 70px;
   border: 4px solid #FFFFFF;
   box-sizing: border-box;
@@ -147,7 +146,7 @@ header input {
   margin-bottom: 36px;
 }
 .subscribe div .subscribe-box p {
-  width: 80%;
+  width: 300px;
   margin-bottom: 60px;
   font-size: 11px;
   line-height: 13px;
@@ -155,32 +154,15 @@ header input {
   color: #FFFFFF;
 }
 
-.box .h2-title, .subscribe .h2-title {
+.box h2, .subscribe h2 {
   color: #FFFFFF;
   font-size: 38px;
-}
-@media (max-width: 768px) {
-  .box .h2-title, .subscribe .h2-title {
-    font-size: 20px;
-  }
+  margin-bottom: 50px;
 }
 
-.box .artist-box .artist {
-  width: 50%;
-}
-@media (max-width: 1024px) {
-  .box .artist-box .artist {
-    width: 80%;
-  }
-}
 .box .artist-box .album {
-  width: 50%;
+  width: 566px;
   flex-direction: column;
-}
-@media (max-width: 1024px) {
-  .box .artist-box .album {
-    width: 80%;
-  }
 }
 .box .artist-box .album h3 {
   font-size: 30px;
@@ -196,21 +178,15 @@ header input {
   align-items: center;
   margin-bottom: 45px;
 }
-.box .artist-box .album div .orange {
+.box .artist-box .album div p {
   color: #F89202;
   font-size: 12px;
-  margin-right: 3%;
-  margin-left: 2%;
 }
-.box .artist-box .album div .divider {
-  color: #CACACA;
-  margin-right: 3%;
-}
-.box .artist-box .album div .date {
-  color: #CACACA;
+.box .artist-box .album div p span {
+  color: #555555;
 }
 .box .artist-box .album button {
-  width: 20%;
+  width: 129.14px;
   height: 50px;
   border: 1px solid #E9E9E9;
   background-color: unset;
@@ -219,15 +195,9 @@ header input {
   font-weight: bold;
   color: #555555;
 }
-@media (max-width: 1024px) {
-  .box .artist-box {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-}
 
 .box .mob-app button {
-  width: 27%;
+  width: 173.76px;
   height: 50px;
   background: #FF4157;
   border-radius: 50px;
@@ -240,10 +210,9 @@ header input {
   color: #808080;
   font-size: 16px;
   margin-bottom: 25px;
-  line-height: 19px;
 }
 .box .mob-app .mob-app-text {
-  width: 44%;
+  width: 566px;
   flex-direction: column;
 }
 
@@ -264,23 +233,27 @@ body {
 .fd-row {
   flex-direction: row;
 }
-@media (max-width: 1024px) {
-  .fd-row {
-    flex-direction: column;
-  }
-}
 
 .mr-100 {
-  margin-right: 8%;
+  margin-right: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .mr-100 {
-    margin-right: 0px;
+    margin-right: 50px;
   }
 }
 
-.ml-23 {
-  margin-left: 23%;
+.ml-300 {
+  margin-left: 300px;
+}
+@media (max-width: 1024px) {
+  .ml-300 {
+    margin-left: 100px;
+  }
+}
+
+.h-30 {
+  height: 30px;
 }
 
 .h-835 {
@@ -300,23 +273,15 @@ body {
 }
 
 .mr-30 {
-  margin-right: 2%;
+  margin-right: 30px;
 }
 
 .mr-73 {
-  margin-right: 6%;
+  margin-right: 73px;
 }
 
 .mt-100 {
   margin-top: 100px;
-}
-
-.w-30p {
-  width: 30%;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
 }
 
 .mb-70 {
@@ -332,11 +297,7 @@ body {
 }
 
 .w-566 {
-  width: 50%;
-}
-
-.pt-30 {
-  padding-top: 30px;
+  width: 566px;
 }
 
 .ai-center {
@@ -348,45 +309,26 @@ body {
 }
 
 .mr-68 {
-  margin-right: 5%;
-}
-
-.w-100p {
-  width: 100%;
+  margin-right: 68px;
 }
 
 .main-container {
   background-image: url(../../images/banner.png);
-  height: 865px;
+  height: 877px;
 }
 
 @media (max-width: 1024px) {
   header {
-    align-items: flex-start !important;
-    padding-left: 2%;
-  }
-  header div {
-    margin-bottom: 25px;
-    order: 1;
-  }
-  header ul {
-    order: 3;
-  }
-  header ul li {
-    margin-bottom: 10px;
-  }
-  header input {
-    margin-left: 0px !important;
-    margin-bottom: 25px;
-    order: 2;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
 .box-in-baner {
+  width: 1200px;
   color: #FFFFFF;
   font-weight: bold;
   flex-direction: column;
-  justify-content: center;
 }
 .box-in-baner h1 {
   font-family: "Roboto", sans-serif;
@@ -405,39 +347,8 @@ body {
 .box-in-baner input {
   margin-top: 40px;
 }
-@media (max-width: 768px) {
-  .box-in-baner h1 {
-    font-size: 30px;
-  }
-  .box-in-baner h3 {
-    font-size: 18px;
-  }
-  .box-in-baner p {
-    font-size: 12px;
-  }
-  .box-in-baner .input-container {
-    align-items: center;
-    flex-direction: column;
-  }
-  .box-in-baner input, .box-in-baner button {
-    width: 80%;
-    margin-right: 0px;
-  }
-}
 .box-in-baner button {
   margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-  .footer .menu1 {
-    flex-direction: column;
-  }
-  .footer .menu2 {
-    flex-direction: column;
-  }
-  .footer li {
-    margin-bottom: 20px;
-  }
 }
 
 .subscribe {
@@ -445,68 +356,18 @@ body {
 }
 .subscribe div .one {
   background: url("../../images/subscribe_1.png");
-  background-repeat: no-repeat;
 }
 .subscribe div .two {
   background: url("../../images/subscribe_2.png");
-  background-repeat: no-repeat;
 }
 .subscribe div .three {
   background: url("../../images/subscribe_3.png");
-  background-repeat: no-repeat;
 }
 .subscribe p {
   color: #FFFFFF;
   text-align: center;
   font-size: 22px;
-}
-@media (max-width: 768px) {
-  .subscribe .rate-info {
-    font-size: 12px;
-  }
-  .subscribe .subscribe-container {
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-  }
-  .subscribe .subscribe-container .subscribe-box {
-    width: 60%;
-    margin-right: 0px;
-    margin-bottom: 50px;
-  }
-  .subscribe .subscribe-container .subscribe-box h2 {
-    font-size: 16px;
-  }
+  width: 1200px;
 }
 
-@media (max-width: 768px) {
-  .box .h2-title {
-    font-size: 20px;
-    margin-top: 45px;
-  }
-  .box .artist-box img {
-    margin-right: 0px;
-    margin-bottom: 20px;
-  }
-  .box .artist-box .album button {
-    width: 100%;
-  }
-  .box .mob-app {
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-  }
-  .box .mob-app .mob-img {
-    order: 1;
-  }
-  .box .mob-app .mob-app-text {
-    order: 2;
-    width: 100%;
-    margin-right: 0px;
-  }
-  .box .mob-app .mob-app-text button {
-    width: 100%;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
