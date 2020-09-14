@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+
 %flex-element-center {
     display: flex;
     justify-content: center;
@@ -35,7 +36,6 @@
 %horizontal-menu {
     @extend %d-flex;
     @extend %uppercase;
-    color: $dark-grey;
     font-weight: bold;
     font-size: 11px;
     list-style-type: none;
@@ -43,6 +43,7 @@
         margin-right: 10%;
     }
     & a {
+        color: $light-grey;
         @extend %a-hover;
     }
     @media (max-width: 1024px) {
@@ -55,7 +56,8 @@
     width: 22%;
     background: #3C3B3D;
     border-radius: 50px;
-    
+    border-style: unset;
+    height: 26px;
 }
 
 
@@ -185,7 +187,7 @@
     }
 }
 
-%main-titels {
+%minor-titels {
     @extend %uppercase;
     color: $white;
     font-size: 38px;
@@ -279,5 +281,116 @@
         width: 44%;
         @extend %d-flex;
         flex-direction: column;
+    }
+}
+
+%catalog-btn {
+    color: $white;
+    position: relative;
+    display: flex;
+    width: 16%;
+    height: 50px;
+    @extend %uppercase;
+}
+
+%play-btn {
+    background: #5328A1;
+    @extend %catalog-btn;
+    border-style: unset;
+
+    .rectangle {
+        position: absolute;
+        z-index: 2;
+        font-size: 1rem;
+        top: 34%;
+        left: 40%;
+    }
+    .circle {
+        position: relative;
+        z-index: 1;
+        font-size: 3rem;
+        bottom: 8px;
+        left: 30%;
+    }
+    .mix {
+        margin-left: 5%;
+        margin-top: 8%;
+    }
+    & :hover{
+        border-style: unset;
+        border-color: unset;
+        border: unset;
+    }
+
+}
+.mb-240 {
+    margin-bottom: 240px;
+}
+
+%favourites-btn {
+    @extend %catalog-btn;
+    background: #95390C;
+    border-style: unset;
+    .heart {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 8%;
+        margin-right: 3%;
+    }
+
+}
+%main-titel {
+    font-family: 'Roboto', sans-serif;
+    @extend %uppercase;
+    font-size: 60px;
+    color: $white;
+}
+
+%track {
+    color: $white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    & img {
+        height: 60px;
+        margin-right: 3%;
+    }
+    .track-container {
+        justify-content: space-between;
+        & div {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            & .track-name {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            & .artist-name {
+                font-size: 12px;
+                color: $light-grey;
+            }
+        }
+        & .time {
+            font-size: 14px;
+            color: $light-grey;
+        }
+    }
+}
+
+%album {
+    color: $white;
+    & .album-data {
+        display: flex;
+        flex-direction: column;
+        & .album-name {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        & .album-date {
+            font-size: 16px;
+        }
     }
 }

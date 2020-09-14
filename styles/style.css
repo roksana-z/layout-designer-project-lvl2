@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-.box-in-baner h3, .box-in-baner h1, .box .artist-box .album button, .box .artist-box .album div .orange, .box .h2-title, .subscribe .h2-title, .subscribe div .subscribe-box button, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, .logo-box {
+.box-in-baner h3, .title-artist h1, .box-in-baner h1, .title-artist .favourites-btn, .title-artist .play-btn, .box .artist-box .album button, .box .artist-box .album div .orange, .catalog-main-container .minor-titel, .box .h2-title, .subscribe .h2-title, .subscribe div .subscribe-box button, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, .logo-box {
   text-transform: uppercase;
 }
 
@@ -24,13 +24,15 @@
 }
 
 header ul {
-  color: #808080;
   font-weight: bold;
   font-size: 11px;
   list-style-type: none;
 }
 header ul li {
   margin-right: 10%;
+}
+header ul a {
+  color: #CACACA;
 }
 @media (max-width: 1024px) {
   header ul {
@@ -42,6 +44,8 @@ header input {
   width: 22%;
   background: #3C3B3D;
   border-radius: 50px;
+  border-style: unset;
+  height: 26px;
 }
 
 .footer {
@@ -155,12 +159,12 @@ header input {
   color: #FFFFFF;
 }
 
-.box .h2-title, .subscribe .h2-title {
+.catalog-main-container .minor-titel, .box .h2-title, .subscribe .h2-title {
   color: #FFFFFF;
   font-size: 38px;
 }
 @media (max-width: 768px) {
-  .box .h2-title, .subscribe .h2-title {
+  .catalog-main-container .minor-titel, .box .h2-title, .subscribe .h2-title {
     font-size: 20px;
   }
 }
@@ -247,6 +251,111 @@ header input {
   flex-direction: column;
 }
 
+.title-artist .favourites-btn, .title-artist .play-btn {
+  color: #FFFFFF;
+  position: relative;
+  display: flex;
+  width: 16%;
+  height: 50px;
+}
+
+.title-artist .play-btn {
+  background: #5328A1;
+  border-style: unset;
+}
+.title-artist .play-btn .rectangle {
+  position: absolute;
+  z-index: 2;
+  font-size: 1rem;
+  top: 34%;
+  left: 40%;
+}
+.title-artist .play-btn .circle {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  bottom: 8px;
+  left: 30%;
+}
+.title-artist .play-btn .mix {
+  margin-left: 5%;
+  margin-top: 8%;
+}
+.title-artist .play-btn :hover {
+  border-style: unset;
+  border-color: unset;
+  border: unset;
+}
+
+.mb-240 {
+  margin-bottom: 240px;
+}
+
+.title-artist .favourites-btn {
+  background: #95390C;
+  border-style: unset;
+}
+.title-artist .favourites-btn .heart {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 8%;
+  margin-right: 3%;
+}
+
+.title-artist h1, .box-in-baner h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  color: #FFFFFF;
+}
+
+.catalog-main-container .tracks div {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.catalog-main-container .tracks div img {
+  height: 60px;
+  margin-right: 3%;
+}
+.catalog-main-container .tracks div .track-container {
+  justify-content: space-between;
+}
+.catalog-main-container .tracks div .track-container div {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.catalog-main-container .tracks div .track-container div .track-name {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.catalog-main-container .tracks div .track-container div .artist-name {
+  font-size: 12px;
+  color: #CACACA;
+}
+.catalog-main-container .tracks div .track-container .time {
+  font-size: 14px;
+  color: #CACACA;
+}
+
+.catalog-main-container .similar-artists div, .catalog-main-container .albums div {
+  color: #FFFFFF;
+}
+.catalog-main-container .similar-artists div .album-data, .catalog-main-container .albums div .album-data {
+  display: flex;
+  flex-direction: column;
+}
+.catalog-main-container .similar-artists div .album-data .album-name, .catalog-main-container .albums div .album-data .album-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.catalog-main-container .similar-artists div .album-data .album-date, .catalog-main-container .albums div .album-data .album-date {
+  font-size: 16px;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -270,6 +379,10 @@ body {
   }
 }
 
+.ml-2p {
+  margin-left: 2%;
+}
+
 .mr-100 {
   margin-right: 8%;
 }
@@ -281,6 +394,22 @@ body {
 
 .ml-23 {
   margin-left: 23%;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.pl-2p {
+  padding-left: 2%;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
 }
 
 .h-835 {
@@ -360,10 +489,15 @@ body {
   height: 865px;
 }
 
+.main-container-catalog {
+  background-image: url(../../images/Morten_Harket.png);
+  height: 550px;
+  background-position: center;
+}
+
 @media (max-width: 1024px) {
   header {
     align-items: flex-start !important;
-    padding-left: 2%;
   }
   header div {
     margin-bottom: 25px;
@@ -386,12 +520,6 @@ body {
   color: #FFFFFF;
   font-weight: bold;
   flex-direction: column;
-  justify-content: center;
-}
-.box-in-baner h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 60px;
-  text-align: center;
 }
 .box-in-baner h3 {
   font-size: 30px;
@@ -507,6 +635,34 @@ body {
   .box .mob-app .mob-app-text button {
     width: 100%;
   }
+}
+
+.mr-3p {
+  margin-right: 3%;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.title-artist {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin-top: 45px;
+  font-weight: bold;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
+  grid-auto-rows: repeat(4, auto);
+  grid-gap: 25px 5%;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  grid-auto-rows: repeat(2, auto);
+  grid-gap: 50px 5%;
 }
 
 /*# sourceMappingURL=style.css.map */

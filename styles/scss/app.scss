@@ -22,7 +22,9 @@ body {
         flex-direction: column;
     }
 }
-
+.ml-2p {
+    margin-left: 2%;
+}
 .mr-100 {
     margin-right: 8%;
     @media (max-width: 768px) {
@@ -34,7 +36,21 @@ body {
     margin-left: 23%;
 }
 
+.mb-25 {
+    margin-bottom: 25px;
+}
 
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.pl-2p {
+    padding-left: 2%;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
 
 .h-835 {
     height: 835px;
@@ -116,6 +132,12 @@ body {
     height: 865px;
 }
 
+.main-container-catalog {
+    background-image: url(../../images/Morten_Harket.png);
+    height: 550px;
+    background-position: center;
+}
+
 header {
     & ul {
         @extend %horizontal-menu;
@@ -125,7 +147,6 @@ header {
     }
     @media (max-width: 1024px) {
         align-items: flex-start!important;
-        padding-left: 2%;
         div {
             margin-bottom: 25px;
             order: 1;
@@ -148,12 +169,8 @@ header {
     color: $white;
     font-weight: bold;
     flex-direction: column;
-    justify-content: center;
     & h1 {
-        font-family: 'Roboto', sans-serif;
-        @extend %uppercase;
-        font-size: 60px;
-        text-align: center;
+        @extend %main-titel;
     }
     & h3 {
         @extend %uppercase;
@@ -229,7 +246,7 @@ header {
     }
 
     & .h2-title {
-        @extend %main-titels;
+        @extend %minor-titels;
     }
     & p {
         color: $white;
@@ -260,7 +277,7 @@ header {
 
 .box {
     & .h2-title {
-        @extend %main-titels;
+        @extend %minor-titels;
     }
     & .artist-box {
         @extend %artist-box;
@@ -268,6 +285,8 @@ header {
     & .mob-app {
         @extend %mob-app;
     }
+
+  
 
     @media (max-width: 768px) {
         .h2-title {
@@ -301,4 +320,65 @@ header {
         }
     }
 
+}
+
+.mr-3p {
+    margin-right: 3%;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.title-artist {
+    color: $white;
+    font-size: 18px;
+    margin-top: 45px;
+    font-weight: bold;
+    h1 {
+        @extend %main-titel;
+    }
+    & .play-btn {
+        @extend %play-btn;
+    }
+    & .favourites-btn {
+        @extend %favourites-btn;
+    }
+}
+
+.catalog-main-container {
+    .minor-titel {
+        @extend %minor-titels;
+    }
+    .tracks {
+        div {
+            @extend %track;
+        }
+    }
+    .albums {
+        div {
+            @extend %album;
+        }
+    }
+    .similar-artists {
+        div {
+            @extend %album;
+        }
+    }
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 47%);
+    grid-auto-rows: repeat(4, auto);
+    grid-gap: 25px 5%;
+}
+
+
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-auto-rows: repeat(2, auto);
+    grid-gap: 50px 5%;
 }
