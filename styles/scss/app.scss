@@ -107,6 +107,10 @@ body {
     padding-top: 30px;
 }
 
+.mb-240 {
+    margin-bottom: 240px;
+}
+
 .ai-center {
     align-items: center;
 }
@@ -136,6 +140,12 @@ body {
     background-image: url(../../images/Morten_Harket.png);
     height: 550px;
     background-position: center;
+    @media (max-width: 768px) {
+        height: 600px;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
 }
 
 header {
@@ -339,10 +349,41 @@ header {
         @extend %main-titel;
     }
     & .play-btn {
-        @extend %play-btn;
+        @extend %catalog-btn;
+        background: $mix-btn;
+        &:hover {
+            background: darken($mix-btn, 10%);
+        }
     }
     & .favourites-btn {
-        @extend %favourites-btn;
+        @extend %catalog-btn;
+        background: $favourites-btn;
+        &:hover {
+            background: darken($favourites-btn, 10%);
+        }
+    }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .play-btn {
+            width: 90%;
+            margin-bottom: 25px;
+        }
+        .favourites-btn {
+           width: 90%;
+           margin-left: 0px;
+        }
+        .btn-container {
+            flex-direction: column!important;
+        }
+        .mix {
+            margin-left: 5%;
+            margin-top: 3%;
+        }
     }
 }
 
@@ -363,6 +404,29 @@ header {
     .similar-artists {
         div {
             @extend %album;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tracks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+        }
+        .albums, .similar-artists {
+            display: grid;
+            grid-template-columns: repeat(2, 40%);
+            grid-auto-rows: repeat(3, auto);
+            grid-gap: 25px 5%;
+            & div img {
+                height: 130px;
+            }
+            & div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
     }
 }

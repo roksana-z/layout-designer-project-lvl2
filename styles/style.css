@@ -253,59 +253,32 @@ header input {
 
 .title-artist .favourites-btn, .title-artist .play-btn {
   color: #FFFFFF;
-  position: relative;
   display: flex;
   width: 16%;
   height: 50px;
-}
-
-.title-artist .play-btn {
-  background: #5328A1;
+  align-items: center;
+  text-decoration: none;
   border-style: unset;
+  font-weight: normal;
 }
-.title-artist .play-btn .rectangle {
-  position: absolute;
-  z-index: 2;
-  font-size: 1rem;
-  top: 34%;
-  left: 40%;
+.title-artist .favourites-btn img, .title-artist .play-btn img {
+  margin: 0% 9%;
 }
-.title-artist .play-btn .circle {
-  position: relative;
-  z-index: 1;
-  font-size: 3rem;
-  bottom: 8px;
-  left: 30%;
-}
-.title-artist .play-btn .mix {
-  margin-left: 5%;
-  margin-top: 8%;
-}
-.title-artist .play-btn :hover {
-  border-style: unset;
-  border-color: unset;
-  border: unset;
-}
-
-.mb-240 {
-  margin-bottom: 240px;
-}
-
-.title-artist .favourites-btn {
-  background: #95390C;
-  border-style: unset;
-}
-.title-artist .favourites-btn .heart {
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 8%;
-  margin-right: 3%;
+@media (max-width: 768px) {
+  .title-artist .favourites-btn .mix, .title-artist .play-btn .mix {
+    margin-bottom: 5%;
+  }
 }
 
 .title-artist h1, .box-in-baner h1 {
   font-family: "Roboto", sans-serif;
   font-size: 60px;
   color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .title-artist h1, .box-in-baner h1 {
+    font-size: 30px;
+  }
 }
 
 .catalog-main-container .tracks div {
@@ -468,6 +441,10 @@ body {
   padding-top: 30px;
 }
 
+.mb-240 {
+  margin-bottom: 240px;
+}
+
 .ai-center {
   align-items: center;
 }
@@ -493,6 +470,14 @@ body {
   background-image: url(../../images/Morten_Harket.png);
   height: 550px;
   background-position: center;
+}
+@media (max-width: 768px) {
+  .main-container-catalog {
+    height: 600px;
+    background-position: 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -651,6 +636,65 @@ body {
   margin-top: 45px;
   font-weight: bold;
 }
+.title-artist .play-btn {
+  background: #5328A1;
+}
+.title-artist .play-btn:hover {
+  background: #3e1e78;
+}
+.title-artist .favourites-btn {
+  background: #95390C;
+}
+.title-artist .favourites-btn:hover {
+  background: #662708;
+}
+@media (max-width: 768px) {
+  .title-artist h1 {
+    font-size: 30px;
+  }
+  .title-artist p {
+    font-size: 14px;
+  }
+  .title-artist .play-btn {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+  .title-artist .favourites-btn {
+    width: 90%;
+    margin-left: 0px;
+  }
+  .title-artist .btn-container {
+    flex-direction: column !important;
+  }
+  .title-artist .mix {
+    margin-left: 5%;
+    margin-top: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-main-container .tracks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  .catalog-main-container .albums, .catalog-main-container .similar-artists {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-auto-rows: repeat(3, auto);
+    grid-gap: 25px 5%;
+  }
+  .catalog-main-container .albums div img, .catalog-main-container .similar-artists div img {
+    height: 130px;
+  }
+  .catalog-main-container .albums div, .catalog-main-container .similar-artists div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 47%);

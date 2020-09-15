@@ -286,64 +286,32 @@
 
 %catalog-btn {
     color: $white;
-    position: relative;
     display: flex;
     width: 16%;
     height: 50px;
     @extend %uppercase;
-}
-
-%play-btn {
-    background: #5328A1;
-    @extend %catalog-btn;
+    align-items: center;
+    text-decoration: none;
     border-style: unset;
-
-    .rectangle {
-        position: absolute;
-        z-index: 2;
-        font-size: 1rem;
-        top: 34%;
-        left: 40%;
+    font-weight: normal;
+    img {
+        margin: 0% 9%;
     }
-    .circle {
-        position: relative;
-        z-index: 1;
-        font-size: 3rem;
-        bottom: 8px;
-        left: 30%;
+    @media (max-width: 768px) {
+        .mix {
+            margin-bottom: 5%;
+        }
     }
-    .mix {
-        margin-left: 5%;
-        margin-top: 8%;
-    }
-    & :hover{
-        border-style: unset;
-        border-color: unset;
-        border: unset;
-    }
-
-}
-.mb-240 {
-    margin-bottom: 240px;
 }
 
-%favourites-btn {
-    @extend %catalog-btn;
-    background: #95390C;
-    border-style: unset;
-    .heart {
-        font-size: 20px;
-        font-weight: bold;
-        margin-left: 8%;
-        margin-right: 3%;
-    }
-
-}
 %main-titel {
     font-family: 'Roboto', sans-serif;
     @extend %uppercase;
     font-size: 60px;
     color: $white;
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
 }
 
 %track {
