@@ -11,13 +11,13 @@
         <header class="d-flex fd-row h-30 ai-center pt-30 mb-240">
             <div class="logo-box mr-100">
                 <img src="./images/logo.svg" alt="logo">
-                <p>Music Box</p>
+                <span>Music Box</span>
             </div>
             <ul class="w-30p">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Исполнители</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./catalog.html">Каталог</a></li>
+                <li><a href="#artists">Исполнители</a></li>
+                <li><a href="#footer">Контакты</a></li>
             </ul>
             <input type="search" placeholder="ПОИСК..." class="ml-23">
         </header>
@@ -40,7 +40,7 @@
         <h2 class="minor-titel mb-50">Популярные треки</h2>
         <div class="tracks grid-2 mb-100">
             <div>
-                <img src="./images/Wild Seed.png" alt="wildseed">
+                    <img src="./images/Wild Seed.png" alt="wildseed">
                 <div class="d-flex track-container">
                     <div>
                         <span class="track-name">Spanish Steps </span>
@@ -103,49 +103,67 @@
         <h2 class="minor-titel mb-50">Дискография</h2>
         <div class="grid-4 albums mb-100">
             <div>
-                <img src="./images/Brother.png" alt="brother">
+                <div class="album-img-container">
+                    <img src="./images/Group.png" alt="group" class="group">
+                    <img src="./images/Brother.png" alt="brother class="album-img">
+                </div>
                 <div class="album-data">
                     <span class="album-name">Brother</span>
                     <span class="album-date">2014</span>
                 </div>
             </div>
             <div>
-                <img src="./images/Out of My Hands.png" alt="out of my hands">
+                <div class="album-img-container">
+                    <img src="./images/Group.png" alt="group" class="group">
+                    <img src="./images/Out of My Hands.png" alt="out of my hands">
+                </div>
                 <div class="album-data">
                     <span class="album-name">Out of My Hands</span>
                     <span class="album-date">2012</span>
                 </div>
             </div>
             <div>
-                <img src="./images/Letter from Egypt.png" alt="Letter from Egypt">
+                <div class="album-img-container">
+                    <img src="./images/Group.png" alt="group" class="group">
+                    <img src="./images/Letter from Egypt.png" alt="Letter from Egypt">
+                </div>
                 <div class="album-data">
                     <span class="album-name">Letter from Egypt</span>
                     <span class="album-date">2008</span>
                 </div>
             </div>
             <div>
-                <img src="./images/Vogts Villa.png" alt="Vogts Villa">
+                <div class="album-img-container">
+                    <img src="./images/Group.png" alt="group" class="group">
+                    <img src="./images/Vogts Villa.png" alt="Vogts Villa">
+                </div>
                 <div class="album-data">
                     <span class="album-name">Vogts Villa</span>
                     <span class="album-date">1996</span>
                 </div>
             </div>
             <div>
-                <img src="./images/Wild Seed.png" alt="Wild Seed">
+                <div class="album-img-container">
+                    <img src="./images/Group.png" alt="group" class="group">
+                    <img src="./images/Wild Seed.png" alt="Wild Seed">
+                </div>
                 <div class="album-data">
                     <span class="album-name">Wild Seed</span>
                     <span class="album-date">1995</span>
                 </div>
             </div>
             <div>
-                <img src="./images/Poetenes Evangelium.png" alt="Poetenes Evangelium">
+                <div class="album-img-container">
+                    <img src="./images/Group.png" alt="group" class="group">
+                    <img src="./images/Poetenes Evangelium.png" alt="Poetenes Evangelium">
+                </div>
                 <div class="album-data">
                     <span class="album-name">Poetenes Evangelium</span>
                     <span class="album-date">1993</span>
                 </div>
             </div>
         </div>
-        <h2 class="minor-titel mb-50">Похожие исполнители</h2>
+        <h2 class="minor-titel mb-50" id="artists">Похожие исполнители</h2>
         <div class="grid-4 similar-artists mt-100">
             <div>
                 <img src="./images/A-ha.png" alt="A-ha">
@@ -207,7 +225,7 @@
 </div>
 </div>
     </div>
-    <footer class="footer mt-100 ">
+    <footer class="footer mt-100 " id="footer">
         <div class="menu1">
             <div>
                 <h2>О нас</h2>
@@ -223,7 +241,7 @@
                 <ul>
                     <li><a href="#">База знаний</a></li>
                     <li><a href="#">Тарифы</a></li>
-                    <li><a href="#">Мобильное приложение</a></li>
+                    <li><a href="./index.html#mob-app">Мобильное приложение</a></li>
                     <li><a href="#">Условия пользования</a></li>
                 </ul>
             </div>
@@ -237,10 +255,10 @@
             </div>
             <div>
                 <h2>Подписывайтесь</h2>
-                <img src="./images/Google+.png" alt="google">
-                <img src="./images/Twitter.png" alt="twitter">
-                <img src="./images/Facebook.png" alt="facebook">
-                <img src="./images/Instagram.png" alt="instagram">
+                <a href="#"><img src="./images/Google+.png" alt="google"></a>
+                <a href=""><img src="./images/Twitter.png" alt="twitter"></a>
+                <a href="#"><img src="./images/Facebook.png" alt="facebook"></a>
+                <a href="#"><img src="./images/Instagram.png" alt="instagram"></a>
             </div>
         </div>
         <hr>

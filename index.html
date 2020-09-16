@@ -11,13 +11,13 @@
         <header class="d-flex fd-row h-30 ai-center jc-center pt-30 mb-240">
                 <div class="logo-box mr-100">
                     <img src="./images/logo.svg" alt="logo">
-                    <p>Music Box</p>
+                    <span>Music Box</span>
                 </div>
                 <ul class="w-30p">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Исполнители</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./catalog.html">Каталог</a></li>
+                    <li><a href="./catalog.html#artists">Исполнители</a></li>
+                    <li><a href="#footer">Контакты</a></li>
                 </ul>
                 <input type="search" placeholder="ПОИСК..." class="ml-23">
         </header>
@@ -34,13 +34,13 @@
             </div>
         </div>
     </div>
-    <div class="box d-flex fd-column ai-center">
+    <div class="box d-flex fd-column ai-center ml-2p">
         <h2 class="mt-100 h2-title mb-50">формы подписки</h2>
-        <div class="subscribe d-flex ai-center fd-column">
+        <div class="subscribe d-flex ai-center fd-column mb-100">
             <div class="d-flex subscribe-container">
                 <div class="subscribe-box one mr-73">
                     <h2>Бесплатная</h2>
-                    <div class="box-price">
+                    <div class="box-price jc-center">
                         <span class="price">0</span>
                         <p class="rub">руб</p>
                     </div>
@@ -103,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="h2-title mb-50">Мобильное приложение</h2>
+        <h2 class="h2-title mb-50" id="mob-app">Мобильное приложение</h2>
         <div class="mob-app d-flex">
             <div class="mob-app-text mr-68">
                 <p class="text">Воспользуйтесь нашим мобильным приложением. Оно позволит слушать музыку с любого устройства на базе операционных систем Androind и iOS</p>
@@ -113,9 +113,9 @@
             <div class="jc-center d-flex ai-center w-566 mob-img"><img src="./images/iphone.png" alt="iphone"></div>
         </div>
     </div>
-    <footer class="footer mt-100 ">
+    <footer class="footer mt-100">
         <div class="menu1">
-            <div>
+            <div id="footer">
                 <h2>О нас</h2>
                 <ul>
                     <li><a href="#">История компании</a></li>
@@ -129,7 +129,7 @@
                 <ul>
                     <li><a href="#">База знаний</a></li>
                     <li><a href="#">Тарифы</a></li>
-                    <li><a href="#">Мобильное приложение</a></li>
+                    <li><a href="#mob-app">Мобильное приложение</a></li>
                     <li><a href="#">Условия пользования</a></li>
                 </ul>
             </div>
@@ -143,10 +143,10 @@
             </div>
             <div>
                 <h2>Подписывайтесь</h2>
-                <img src="./images/Google+.png" alt="google">
-                <img src="./images/Twitter.png" alt="twitter">
-                <img src="./images/Facebook.png" alt="facebook">
-                <img src="./images/Instagram.png" alt="instagram">
+                <a href="#"><img src="./images/Google+.png" alt="google"></a>
+                <a href="#"><img src="./images/Twitter.png" alt="twitter"></a>
+                <a href="#"><img src="./images/Facebook.png" alt="facebook"></a>
+                <a href="#"><img src="./images/Instagram.png" alt="instagram"></a>
             </div>
         </div>
         <hr>
