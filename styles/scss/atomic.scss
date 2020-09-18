@@ -1,20 +1,6 @@
 @import "./variables.scss";
 
 
-%flex-element-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-%uppercase {
-    text-transform: uppercase;
-}
-
-%d-flex {
-    display: flex;
-}
-
 %a-hover {
     text-decoration: none;
         &:hover {
@@ -23,20 +9,19 @@
 }
 
 %logo-box {
-    @extend %d-flex;
-    @extend %uppercase;
-    color: $white;
+    display: flex;
+    text-transform: uppercase;
     font-weight: bold;
     align-items: center;
     font-size: 11px;
     & img {
         height: 17px;
+        margin-right: 4;
     }
 }
 
 %horizontal-menu {
-    @extend %d-flex;
-    @extend %uppercase;
+    display: flex;
     font-weight: bold;
     font-size: 11px;
     list-style-type: none;
@@ -49,161 +34,148 @@
     }
     @media (max-width: 768px) {
             flex-direction: column;
+            li {
+                margin-bottom: 10px;
+            }
     }
 }
 
-%search {
-    @extend %d-flex;
-    width: 22%;
-    background: #3C3B3D;
-    border-radius: 50px;
+@mixin input-and-btn ($w, $h, $bc, $br) {
+    width: $w;
+    background: $bc;
+    border-radius: $br;
     border-style: unset;
-    height: 26px;
+    height: $h;
+}
+
+%search {
+    @include input-and-btn(22%, 26px, #3C3B3D, 50px)
+}
+
+
+%email-input {
+    @include input-and-btn (32%, 50px, $input-color, 3px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 
 %footer {
-    @extend %d-flex;
+    display: flex;
     background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
-
     color: $light-grey;
     flex-direction: column;
     align-items: center;
-    & .menu1 {
-        @extend %d-flex;
+    .menu1 {
+        display: flex;
         flex-direction: row;
         width: 90%;
         flex-wrap: wrap;
         
-        & h2 {
+        h2 {
             margin-top: 80px;
             margin-bottom: 10px;
         }
-        & ul {
+        ul {
             list-style-type: none;
         }
-        & ul li {
+        ul li {
             margin-top: 20px;
         }
-        & ul a, img {
+        ul a, img {
             color: $light-grey;
             margin-top: 20px;
             @extend %a-hover;
         }
-        & div {
+        div {
             margin-right: 8%;
         }
-        & div img {
+        div img {
             margin-right: 4%;
             height: 17px;
         }
     }
-    & hr {
+    hr {
         margin-top: 100px;
         width: 100%;
     }
-    & .menu2 {
-        @extend %d-flex;
+    .menu2 {
+        display: flex;
         margin-top: 50px;
         flex-direction: row;
         list-style-type: none;
         align-items: flex-start;
         width: 90%;
         margin-bottom: 60px;
-        & a {
+        a {
             @extend %a-hover;
             display: flex;
             color: $light-grey;
         }
-        & li {
+        li {
             margin-right: 3%;
         }
     }
 }
 
-%email-input {
-    width: 30%;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-sizing: border-box;
-    border-radius: 3px;
-    color: $white;
-}
-
 %access-btn {
-    @extend %uppercase;
-    width: 63%;
-    height: 50px;
-    background: $green;
-    color: $white;
+    @include input-and-btn(68%, 50px, $green, 0px);
+    text-transform: uppercase;
     font-weight: bold;
     &:hover {
         background: darken($green, 10%);
-        border-style: unset;
         cursor: pointer;
     }
 }
 
 %subscribe-box {
-    @extend %d-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 30%;
     height: 580px;
     
-    & h2 {
-        color: $white;
-        @extend %uppercase;
+    h2 {
+        text-transform: uppercase;
         font-size: 24px;
         margin-bottom: 223px;
         margin-top: 25px;
     }
-    & .box-price {
-        color: $white;
-        @extend %d-flex;
-        align-items: flex-start;
+    .box-price {
         display: flex;
-        & .price {
+        align-items: flex-start;
+        .price {
             font-size: 60px;
         }
-        & .rub {
+        .rub {
             line-height: 50px;
-            @extend %uppercase;
+            text-transform: uppercase;
             font-size: 30px;
             margin-left: 7%;
         }
     }
-    & button {
-        width: 80%;
-        height: 70px;
+    button {
+        @include input-and-btn(80%, 70px, unset, 0px);
         margin-bottom: 36px;
         border: 4px solid #FFFFFF;
-        box-sizing: border-box;
-        background-color: unset;
         font-size: 24px;
-        @extend %uppercase;
-        color: $white;
+        text-transform: uppercase;
         opacity: 1;
         &:hover {
             cursor: pointer;
             opacity: 0.6;
         }
     }
-    & p {
+    p {
         width: 80%;
         margin-bottom: 60px;
         font-size: 11px;
         line-height: 13px;
         text-align: center;
-        
-        color: $white;
     }
 }
 
 %minor-titles {
-    @extend %uppercase;
-    color: $white;
+    text-transform: uppercase;
     font-size: 38px;
     @media (max-width: 768px) {
         font-size: 20px;
@@ -211,37 +183,31 @@
 }
 
 %artist-box {
-    @extend %d-flex;
-    & .artist {
+    display: flex;
+    .artist {
         width: 50%;
-        @media (max-width: 1024px) {
-            width: 80%;
-        }
+
     }
-    & .album {
-        @extend %d-flex;
+    .album {
+        display: flex;
         width: 50%;
-        @media (max-width: 1024px) {
-            width: 80%;
-        }
         flex-direction: column;
         
         & h3 {
         font-size: 30px;
         margin-bottom: 25px;
-        color: $white;
         }
-        & p {
+        p {
             color: $light-grey;
             font-size: 14px;
             line-height: 35px;
         }
-        & div {
-            @extend %d-flex;
+        div {
+            display: flex;
             align-items: center;
             margin-bottom: 45px;
-            & .orange {
-                @extend %uppercase;
+            .orange {
+               text-transform: uppercase;
                 color: $orange;
                 font-size: 12px;
                 margin-right: 3%;
@@ -255,71 +221,58 @@
                 color: $light-grey;
             }
         }
-        & button {
-            width: 20%;
-            height: 50px;
+        button {
+            @include input-and-btn(20%, 50px, unset, 5px);
             border: 1px solid #E9E9E9;
-            background-color: unset;
             text-align: center;
-            @extend %uppercase;
+            text-transform: uppercase;
             font-size: 12px;
             font-weight: bold;
             color: $dark;
-            border-radius: 5px;
             opacity: 1;
             &:hover {
                 cursor: pointer;
                 opacity: 0.6;
-    }
+            }
         }
-    }
-    @media (max-width: 1024px) {
-        flex-wrap: wrap;
-        flex-direction: column;
     }
 }
 
 %pink-btn {
-    width: 31%;
-    height: 56px;
-    background: $pink;
-    border-radius: 50px;
+    @include input-and-btn(31%, 56px, $pink, 50px);
     border-color: $pink;
     color: $white;
     &:hover {
         cursor: pointer;
         background-color: $purple;
-}
+    }
 }
 
 %mob-app {
     display: flex;
-    & p {
+    p {
         color: $dark-grey;
         font-size: 16px;
         margin-bottom: 25px;
         line-height: 19px;
     }
-    & button {
+    button {
         @extend %pink-btn;
     }
-    & .mob-app-text {
+    .mob-app-text {
         width: 44%;
-        @extend %d-flex;
+        display: flex;
         flex-direction: column;
     }
 }
 
 %catalog-btn {
-    color: $white;
+    @include input-and-btn(16%, 50px, unset, 0px);
     display: flex;
-    width: 16%;
-    height: 50px;
-    @extend %uppercase;
+    text-transform: uppercase;
     align-items: center;
     text-decoration: none;
     border-style: unset;
-    font-weight: normal;
     img {
         margin: 0% 9%;
     }
@@ -329,42 +282,39 @@
 }
 
 %main-title {
-    font-family: 'Roboto', sans-serif;
-    @extend %uppercase;
+    text-transform: uppercase;
     font-size: 60px;
-    color: $white;
     @media (max-width: 768px) {
         font-size: 30px;
     }
 }
 
 %track {
-    color: $white;
     display: flex;
     align-items: center;
     width: 100%;
-    & img {
+    img {
         height: 60px;
         margin-right: 3%;
     }
     .track-container {
         justify-content: space-between;
-        & div {
+        div {
             width: auto;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             
-            & .track-name {
+            .track-name {
                 font-size: 14px;
                 margin-bottom: 5px;
             }
-            & .artist-name {
+            .artist-name {
                 font-size: 12px;
                 color: $light-grey;
             }
         }
-        & .time {
+        .time {
             font-size: 14px;
             color: $light-grey;
         }
@@ -372,20 +322,19 @@
 }
 
 %album {
-    color: $white;
-        .album-img-container {
-            position: relative;
-            .group {
-                position: absolute;
-                height: 25px;
-                top: 85%;
-                left: 4%;
-            }
+    .album-img-container {
+        position: relative;
+        .group {
+            position: absolute;
+            height: 25px;
+            top: 85%;
+            left: 4%;
+        }
     }
-    & .album-data {
+    .album-data {
         display: flex;
         flex-direction: column;
-        & .album-name {
+        .album-name {
             font-weight: bold;
             font-size: 20px;
             margin-bottom: 10px;
@@ -393,7 +342,7 @@
                 font-size: 16px;
             };
         }
-        & .album-date {
+        .album-date {
             font-size: 16px;
             @media (max-width: 768px) {
                 font-size: 14px;

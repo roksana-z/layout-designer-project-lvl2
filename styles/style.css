@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-.box-in-baner h3, .title-artist h1, .box-in-baner h1, .title-artist .favourites-btn, .title-artist .play-btn, .box .artist-box .album button, .box .artist-box .album div .orange, .catalog-main-container .minor-title, .box .h2-title, .subscribe .h2-title, .subscribe div .subscribe-box button, .subscribe div .subscribe-box .box-price .rub, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, header .logo-box {
-  text-transform: uppercase;
-}
-
-.box .mob-app .mob-app-text, .box .artist-box .album div, .box .artist-box .album, .box .artist-box, .subscribe div .subscribe-box .box-price, .subscribe div .subscribe-box, .footer .menu2, .footer .menu1, .footer, header input, header ul, header .logo-box {
-  display: flex;
-}
-
 .footer .menu2 a, .footer .menu1 ul a, .footer .menu1 img, header ul a {
   text-decoration: none;
 }
@@ -15,16 +7,19 @@
 }
 
 header .logo-box {
-  color: #FFFFFF;
+  display: flex;
+  text-transform: uppercase;
   font-weight: bold;
   align-items: center;
   font-size: 11px;
 }
 header .logo-box img {
   height: 17px;
+  margin-right: 4;
 }
 
 header ul {
+  display: flex;
   font-weight: bold;
   font-size: 11px;
   list-style-type: none;
@@ -39,6 +34,9 @@ header ul a {
   header ul {
     flex-direction: column;
   }
+  header ul li {
+    margin-bottom: 10px;
+  }
 }
 
 header input {
@@ -49,13 +47,24 @@ header input {
   height: 26px;
 }
 
+.box-in-baner input {
+  width: 32%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  border-style: unset;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
 .footer {
+  display: flex;
   background: linear-gradient(89.75deg, #5328A1 32.83%, #95390C 81.56%);
   color: #CACACA;
   flex-direction: column;
   align-items: center;
 }
 .footer .menu1 {
+  display: flex;
   flex-direction: row;
   width: 90%;
   flex-wrap: wrap;
@@ -86,6 +95,7 @@ header input {
   width: 100%;
 }
 .footer .menu2 {
+  display: flex;
   margin-top: 50px;
   flex-direction: row;
   list-style-type: none;
@@ -101,63 +111,56 @@ header input {
   margin-right: 3%;
 }
 
-.box-in-baner input {
-  width: 30%;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box;
-  border-radius: 3px;
-  color: #FFFFFF;
-}
-
 .box-in-baner button {
-  width: 63%;
-  height: 50px;
+  width: 68%;
   background: #34C176;
-  color: #FFFFFF;
+  border-radius: 0px;
+  border-style: unset;
+  height: 50px;
+  text-transform: uppercase;
   font-weight: bold;
 }
 .box-in-baner button:hover {
   background: #29995d;
-  border-style: unset;
   cursor: pointer;
 }
 
 .subscribe div .subscribe-box {
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 30%;
   height: 580px;
 }
 .subscribe div .subscribe-box h2 {
-  color: #FFFFFF;
+  text-transform: uppercase;
   font-size: 24px;
   margin-bottom: 223px;
   margin-top: 25px;
 }
 .subscribe div .subscribe-box .box-price {
-  color: #FFFFFF;
-  align-items: flex-start;
   display: flex;
+  align-items: flex-start;
 }
 .subscribe div .subscribe-box .box-price .price {
   font-size: 60px;
 }
 .subscribe div .subscribe-box .box-price .rub {
   line-height: 50px;
+  text-transform: uppercase;
   font-size: 30px;
   margin-left: 7%;
 }
 .subscribe div .subscribe-box button {
   width: 80%;
+  background: unset;
+  border-radius: 0px;
+  border-style: unset;
   height: 70px;
   margin-bottom: 36px;
   border: 4px solid #FFFFFF;
-  box-sizing: border-box;
-  background-color: unset;
   font-size: 24px;
-  color: #FFFFFF;
+  text-transform: uppercase;
   opacity: 1;
 }
 .subscribe div .subscribe-box button:hover {
@@ -170,40 +173,32 @@ header input {
   font-size: 11px;
   line-height: 13px;
   text-align: center;
-  color: #FFFFFF;
 }
 
-.catalog-main-container .minor-title, .box .h2-title, .subscribe .h2-title {
-  color: #FFFFFF;
+.catalog-main-container .minor-title, .box .h2-title, .h2-title {
+  text-transform: uppercase;
   font-size: 38px;
 }
 @media (max-width: 768px) {
-  .catalog-main-container .minor-title, .box .h2-title, .subscribe .h2-title {
+  .catalog-main-container .minor-title, .box .h2-title, .h2-title {
     font-size: 20px;
   }
 }
 
+.box .artist-box {
+  display: flex;
+}
 .box .artist-box .artist {
   width: 50%;
 }
-@media (max-width: 1024px) {
-  .box .artist-box .artist {
-    width: 80%;
-  }
-}
 .box .artist-box .album {
+  display: flex;
   width: 50%;
   flex-direction: column;
-}
-@media (max-width: 1024px) {
-  .box .artist-box .album {
-    width: 80%;
-  }
 }
 .box .artist-box .album h3 {
   font-size: 30px;
   margin-bottom: 25px;
-  color: #FFFFFF;
 }
 .box .artist-box .album p {
   color: #CACACA;
@@ -211,10 +206,12 @@ header input {
   line-height: 35px;
 }
 .box .artist-box .album div {
+  display: flex;
   align-items: center;
   margin-bottom: 45px;
 }
 .box .artist-box .album div .orange {
+  text-transform: uppercase;
   color: #F89202;
   font-size: 12px;
   margin-right: 3%;
@@ -229,32 +226,29 @@ header input {
 }
 .box .artist-box .album button {
   width: 20%;
+  background: unset;
+  border-radius: 5px;
+  border-style: unset;
   height: 50px;
   border: 1px solid #E9E9E9;
-  background-color: unset;
   text-align: center;
+  text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
   color: #555555;
-  border-radius: 5px;
   opacity: 1;
 }
 .box .artist-box .album button:hover {
   cursor: pointer;
   opacity: 0.6;
 }
-@media (max-width: 1024px) {
-  .box .artist-box {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-}
 
 .box .mob-app button {
   width: 31%;
-  height: 56px;
   background: #FF4157;
   border-radius: 50px;
+  border-style: unset;
+  height: 56px;
   border-color: #FF4157;
   color: #FFFFFF;
 }
@@ -274,18 +268,21 @@ header input {
 }
 .box .mob-app .mob-app-text {
   width: 44%;
+  display: flex;
   flex-direction: column;
 }
 
 .title-artist .favourites-btn, .title-artist .play-btn {
-  color: #FFFFFF;
-  display: flex;
   width: 16%;
+  background: unset;
+  border-radius: 0px;
+  border-style: unset;
   height: 50px;
+  display: flex;
+  text-transform: uppercase;
   align-items: center;
   text-decoration: none;
   border-style: unset;
-  font-weight: normal;
 }
 .title-artist .favourites-btn img, .title-artist .play-btn img {
   margin: 0% 9%;
@@ -297,9 +294,8 @@ header input {
 }
 
 .title-artist h1, .box-in-baner h1 {
-  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
   font-size: 60px;
-  color: #FFFFFF;
 }
 @media (max-width: 768px) {
   .title-artist h1, .box-in-baner h1 {
@@ -308,7 +304,6 @@ header input {
 }
 
 .catalog-main-container .tracks div {
-  color: #FFFFFF;
   display: flex;
   align-items: center;
   width: 100%;
@@ -339,9 +334,6 @@ header input {
   color: #CACACA;
 }
 
-.catalog-main-container .similar-artists div, .catalog-main-container .albums div {
-  color: #FFFFFF;
-}
 .catalog-main-container .similar-artists div .album-img-container, .catalog-main-container .albums div .album-img-container {
   position: relative;
 }
@@ -389,6 +381,10 @@ body {
   display: flex;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .mr-8p {
   margin-right: 8%;
 }
@@ -429,6 +425,10 @@ body {
   width: 95%;
 }
 
+.w-100p {
+  width: 100%;
+}
+
 .mr-6p {
   margin-right: 6%;
 }
@@ -443,6 +443,10 @@ body {
 
 .mb-50 {
   margin-bottom: 50px;
+}
+
+.pb-76 {
+  padding-bottom: 76px;
 }
 
 .mb-70 {
@@ -505,16 +509,13 @@ body {
   header {
     flex-direction: column;
     align-items: flex-start !important;
-    margin-left: 2%;
+    margin-bottom: 70px !important;
   }
   header div {
     margin-bottom: 25px;
   }
   header ul {
     order: 3;
-  }
-  header ul li {
-    margin-bottom: 10px;
   }
   header input {
     margin-left: 0px !important;
@@ -555,6 +556,7 @@ body {
   .box-in-baner input, .box-in-baner button {
     width: 80%;
     margin-right: 0px;
+    margin-bottom: 30px;
   }
 }
 
@@ -621,9 +623,18 @@ body {
     font-size: 20px;
     margin-top: 45px;
   }
-  .box .artist-box img {
+  .box .artist-box {
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+  }
+  .box .artist-box .artist {
     margin-right: 0px;
     margin-bottom: 20px;
+    width: 100%;
+  }
+  .box .artist-box .album {
+    width: 100%;
   }
   .box .artist-box .album button {
     width: 100%;
@@ -686,6 +697,10 @@ body {
   }
 }
 
+.catalog-main-container .similar-artists div .album-data {
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 768px) {
   .catalog-main-container .tracks {
     display: flex;
@@ -694,9 +709,10 @@ body {
   }
   .catalog-main-container .albums, .catalog-main-container .similar-artists {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 40%);
     grid-auto-rows: repeat(3, auto);
-    grid-gap: 25px 5%;
+    grid-gap: 25px 7%;
+    justify-content: center;
   }
   .catalog-main-container .albums div, .catalog-main-container .similar-artists div {
     display: flex;
@@ -704,18 +720,31 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .catalog-main-container .albums img, .catalog-main-container .similar-artists img {
+    height: 180px;
+  }
   .catalog-main-container .albums .group, .catalog-main-container .similar-artists .group {
     height: 20px;
     top: 85%;
   }
 }
 @media (max-width: 425px) {
-  .catalog-main-container .albums div img, .catalog-main-container .similar-artists div img {
+  .catalog-main-container .album-img-container img, .catalog-main-container .similar-artists img {
     height: 130px;
   }
-  .catalog-main-container .albums div .group, .catalog-main-container .similar-artists div .group {
-    height: 20px;
-    top: 80%;
+  .catalog-main-container .album-img-container .group, .catalog-main-container .similar-artists .group {
+    height: 20px !important;
+    top: 80% !important;
+  }
+  .catalog-main-container .album-img-container .album-name, .catalog-main-container .album-img-container .album-date, .catalog-main-container .similar-artists .album-name, .catalog-main-container .similar-artists .album-date {
+    font-size: 12px !important;
+  }
+  .catalog-main-container .albums div {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  .catalog-main-container .similar-artists {
+    justify-content: center;
   }
 }
 

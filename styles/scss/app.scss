@@ -17,6 +17,10 @@ body {
     display: flex;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .mr-8p {
     margin-right: 8%;
 }
@@ -57,6 +61,10 @@ body {
     width: 95%;
 }
 
+.w-100p {
+    width: 100%;
+}
+
 .mr-6p {
     margin-right: 6%;
 }
@@ -71,6 +79,10 @@ body {
 
 .mb-50 {
     margin-bottom: 50px;
+}
+
+.pb-76 {
+    padding-bottom: 76px;
 }
 
 .mb-70 {
@@ -136,15 +148,12 @@ header {
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: flex-start!important;
-        margin-left: 2%;
+        margin-bottom: 70px!important;
         div {
             margin-bottom: 25px;
         }
         ul {
             order: 3;
-            li {
-                margin-bottom: 10px;
-            }
         }
         input {
             margin-left: 0px!important;
@@ -174,9 +183,6 @@ header {
     h1 {
         @extend %main-title;
     }
-    h3 {
-        @extend %uppercase;
-    }
     input {
         @extend %email-input;
     }
@@ -192,8 +198,8 @@ header {
         input, button {
             width: 80%;
             margin-right: 0px;
+            margin-bottom: 30px;
         }
-
     }
 }
 
@@ -217,6 +223,10 @@ header {
     }
 }
 
+.h2-title {
+    @extend %minor-titles;
+}
+
 .subscribe {
     div {
         .subscribe-box {
@@ -231,10 +241,6 @@ header {
         .three {
             @include subscribe-img(3)
         }
-    }
-
-    .h2-title {
-        @extend %minor-titles;
     }
 
     p {
@@ -261,6 +267,11 @@ header {
 
 }
 
+@mixin column {
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
 
 .box {
     .h2-title {
@@ -279,18 +290,21 @@ header {
             margin-top: 45px;
         }
         .artist-box {
-            img {
+            @include column();
+            .artist {
                 margin-right: 0px;
                 margin-bottom: 20px;
-            }
-            .album button {
                 width: 100%;
+            }
+            .album {
+                width: 100%;
+                button {
+                    width: 100%;
+                }
             }
         }
         .mob-app {
-            flex-direction: column;
-            width: 80%;
-            align-items: center;
+            @include column();
             .mob-img {
                 order: 1;
             }
@@ -370,6 +384,10 @@ header {
     .similar-artists {
         div {
             @extend %album;
+            .album-data {
+                display: flex;
+                align-items: center;
+            }
         }
     }
 
@@ -382,14 +400,18 @@ header {
   
         .albums, .similar-artists {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 40%);
             grid-auto-rows: repeat(3, auto);
-            grid-gap: 25px 5%;
+            grid-gap: 25px 7%;
+            justify-content: center;
             div {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+            }
+            img {
+                height: 180px;
             }
             .group {
                 height: 20px;
@@ -399,16 +421,28 @@ header {
     }
 
     @media (max-width: 425px) {
-        .albums, .similar-artists {
-            div  {
-                img {
-                    height: 130px;
-                }
-                .group {
-                    height: 20px;
-                    top: 80%;
-                }
+        .album-img-container, .similar-artists {
+            img {
+                height: 130px;
             }
+            .group {
+                height: 20px!important;
+                top: 80%!important;
+            }
+            .album-name, .album-date {
+                font-size: 12px!important;
+            }
+  
+        }
+        .albums {
+             div {
+                justify-content: flex-start!important;
+                align-items: flex-start!important;
+             }
+            
+        }
+        .similar-artists {
+            justify-content: center;
         }
     }
 }
