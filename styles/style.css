@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-.box-in-baner h3, .title-artist h1, .box-in-baner h1, .title-artist .favourites-btn, .title-artist .play-btn, .box .artist-box .album button, .box .artist-box .album div .orange, .catalog-main-container .minor-titel, .box .h2-title, .subscribe .h2-title, .subscribe div .subscribe-box button, .subscribe div .subscribe-box .box-price .rub, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, .logo-box {
+.box-in-baner h3, .title-artist h1, .box-in-baner h1, .title-artist .favourites-btn, .title-artist .play-btn, .box .artist-box .album button, .box .artist-box .album div .orange, .catalog-main-container .minor-title, .box .h2-title, .subscribe .h2-title, .subscribe div .subscribe-box button, .subscribe div .subscribe-box .box-price .rub, .subscribe div .subscribe-box h2, .box-in-baner button, header ul, header .logo-box {
   text-transform: uppercase;
 }
 
-.box .mob-app .mob-app-text, .box .artist-box .album div, .box .artist-box .album, .box .artist-box, .subscribe div .subscribe-box .box-price, .subscribe div .subscribe-box, .footer .menu2, .footer .menu1, .footer, header input, header ul, .logo-box {
+.box .mob-app .mob-app-text, .box .artist-box .album div, .box .artist-box .album, .box .artist-box, .subscribe div .subscribe-box .box-price, .subscribe div .subscribe-box, .footer .menu2, .footer .menu1, .footer, header input, header ul, header .logo-box {
   display: flex;
 }
 
@@ -14,13 +14,13 @@
   color: #FFFFFF;
 }
 
-.logo-box {
+header .logo-box {
   color: #FFFFFF;
   font-weight: bold;
   align-items: center;
   font-size: 11px;
 }
-.logo-box img {
+header .logo-box img {
   height: 17px;
 }
 
@@ -173,12 +173,12 @@ header input {
   color: #FFFFFF;
 }
 
-.catalog-main-container .minor-titel, .box .h2-title, .subscribe .h2-title {
+.catalog-main-container .minor-title, .box .h2-title, .subscribe .h2-title {
   color: #FFFFFF;
   font-size: 38px;
 }
 @media (max-width: 768px) {
-  .catalog-main-container .minor-titel, .box .h2-title, .subscribe .h2-title {
+  .catalog-main-container .minor-title, .box .h2-title, .subscribe .h2-title {
     font-size: 20px;
   }
 }
@@ -290,11 +290,6 @@ header input {
 .title-artist .favourites-btn img, .title-artist .play-btn img {
   margin: 0% 9%;
 }
-@media (max-width: 768px) {
-  .title-artist .favourites-btn .mix, .title-artist .play-btn .mix {
-    margin-bottom: 5%;
-  }
-}
 @media (max-width: 1024px) {
   .title-artist .favourites-btn, .title-artist .play-btn {
     width: 20%;
@@ -383,6 +378,7 @@ header input {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
+  color: #FFFFFF;
 }
 
 body {
@@ -393,24 +389,11 @@ body {
   display: flex;
 }
 
-.fd-row {
-  flex-direction: row;
-}
-
-.ml-2p {
-  margin-left: 2%;
-}
-
-.mr-100 {
+.mr-8p {
   margin-right: 8%;
 }
-@media (max-width: 768px) {
-  .mr-100 {
-    margin-right: 0px;
-  }
-}
 
-.ml-23 {
+.ml-23p {
   margin-left: 23%;
 }
 
@@ -430,32 +413,28 @@ body {
   margin-bottom: 80px;
 }
 
-.h-835 {
-  height: 835px;
-}
-
-.bc-black {
-  background-color: black;
-}
-
-.jc-center {
+.justify-content-center {
   justify-content: center;
 }
 
-.fd-column {
+.flex-direction-column {
   flex-direction: column;
 }
 
-.mr-30 {
-  margin-right: 2%;
+.mr-3p {
+  margin-right: 3%;
 }
 
-.mr-73 {
+.w-95p {
+  width: 95%;
+}
+
+.mr-6p {
   margin-right: 6%;
 }
 
-.mt-100 {
-  margin-top: 100px;
+.mb-45 {
+  margin-bottom: 45px;
 }
 
 .w-30p {
@@ -474,11 +453,7 @@ body {
   margin-bottom: 100px;
 }
 
-.mt-51 {
-  margin-top: 51px;
-}
-
-.w-566 {
+.w-50p {
   width: 50%;
 }
 
@@ -486,55 +461,54 @@ body {
   padding-top: 30px;
 }
 
+.mb-30 {
+  margin-bottom: 30px;
+}
+
 .mb-240 {
   margin-bottom: 240px;
 }
 
-.ai-center {
+.align-items-center {
   align-items: center;
 }
 
-.fd-reverse-row {
+.flex-direction-reverse-row {
   flex-direction: row-reverse;
 }
 
-.mr-68 {
-  margin-right: 5%;
-}
-
-.w-100p {
-  width: 100%;
-}
-
 .main-container {
-  background-image: url(../../images/banner.png);
-  height: 865px;
+  background-image: url("../../images/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .main-container {
+    background-position: 75%;
+  }
 }
 
 .main-container-catalog {
-  background-image: url(../../images/Morten_Harket.png);
-  height: 550px;
+  background-image: url("../../images/Morten_Harket.png");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (max-width: 768px) {
   .main-container-catalog {
-    height: 600px;
     background-position: 75%;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: flex-start !important;
-    margin-bottom: 100px !important;
     margin-left: 2%;
   }
   header div {
     margin-bottom: 25px;
-    order: 1;
   }
   header ul {
     order: 3;
@@ -551,31 +525,25 @@ body {
 }
 
 .box-in-baner {
-  color: #FFFFFF;
   font-weight: bold;
   flex-direction: column;
+  text-align: center;
 }
 .box-in-baner h1 {
-  text-align: center;
+  font-size: 60px;
 }
 .box-in-baner h3 {
-  font-size: 30px;
-  text-align: center;
+  font-size: h2;
 }
 .box-in-baner p {
   font-size: 18px;
-  margin-top: 45px;
-  text-align: center;
-}
-.box-in-baner input {
-  margin-top: 40px;
 }
 @media (max-width: 768px) {
   .box-in-baner h1 {
     font-size: 30px;
   }
   .box-in-baner h3 {
-    font-size: 18px;
+    font-size: h2;
   }
   .box-in-baner p {
     font-size: 12px;
@@ -589,15 +557,9 @@ body {
     margin-right: 0px;
   }
 }
-.box-in-baner button {
-  margin-top: 30px;
-}
 
 @media (max-width: 768px) {
-  .footer .menu1 {
-    flex-direction: column;
-  }
-  .footer .menu2 {
+  .footer .menu1, .footer .menu2 {
     flex-direction: column;
   }
   .footer li {
@@ -605,33 +567,36 @@ body {
   }
 }
 
-.subscribe {
-  background-color: black;
-}
 .subscribe div .one {
   background: url("../../images/subscribe_1.png");
   background-repeat: no-repeat;
 }
+@media (max-width: 768px) {
+  .subscribe div .one {
+    background-size: 100% !important;
+  }
+}
 .subscribe div .two {
   background: url("../../images/subscribe_2.png");
   background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .subscribe div .two {
+    background-size: 100% !important;
+  }
 }
 .subscribe div .three {
   background: url("../../images/subscribe_3.png");
   background-repeat: no-repeat;
 }
 @media (max-width: 768px) {
-  .subscribe .one, .subscribe .two, .subscribe .three {
+  .subscribe div .three {
     background-size: 100% !important;
   }
 }
 .subscribe p {
-  color: #FFFFFF;
   text-align: center;
   font-size: 22px;
-}
-.subscribe .rate-info {
-  width: 95%;
 }
 @media (max-width: 768px) {
   .subscribe .rate-info {
@@ -685,14 +650,8 @@ body {
   margin-right: 3%;
 }
 
-.mb-100 {
-  margin-bottom: 100px;
-}
-
 .title-artist {
-  color: #FFFFFF;
   font-size: 18px;
-  margin-top: 45px;
   font-weight: bold;
 }
 .title-artist .play-btn {
@@ -725,18 +684,13 @@ body {
   .title-artist .btn-container {
     flex-direction: column !important;
   }
-  .title-artist .mix {
-    margin-left: 5%;
-    margin-top: 3%;
-  }
 }
 
 @media (max-width: 768px) {
   .catalog-main-container .tracks {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 90%;
+    width: 95%;
   }
   .catalog-main-container .albums, .catalog-main-container .similar-artists {
     display: grid;
@@ -750,7 +704,7 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .catalog-main-container .albums div .album-img-container .group, .catalog-main-container .similar-artists div .album-img-container .group {
+  .catalog-main-container .albums .group, .catalog-main-container .similar-artists .group {
     height: 20px;
     top: 85%;
   }
@@ -759,7 +713,7 @@ body {
   .catalog-main-container .albums div img, .catalog-main-container .similar-artists div img {
     height: 130px;
   }
-  .catalog-main-container .albums div .album-img-container .group, .catalog-main-container .similar-artists div .album-img-container .group {
+  .catalog-main-container .albums div .group, .catalog-main-container .similar-artists div .group {
     height: 20px;
     top: 80%;
   }

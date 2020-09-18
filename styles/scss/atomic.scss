@@ -201,7 +201,7 @@
     }
 }
 
-%minor-titels {
+%minor-titles {
     @extend %uppercase;
     color: $white;
     font-size: 38px;
@@ -323,17 +323,12 @@
     img {
         margin: 0% 9%;
     }
-    @media (max-width: 768px) {
-        .mix {
-            margin-bottom: 5%;
-        }
-    }
     @media (max-width: 1024px) {
         width: 20%;
     }
 }
 
-%main-titel {
+%main-title {
     font-family: 'Roboto', sans-serif;
     @extend %uppercase;
     font-size: 60px;

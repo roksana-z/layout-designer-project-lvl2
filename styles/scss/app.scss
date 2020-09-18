@@ -6,6 +6,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
+    color: $white;
 }
 
 body {
@@ -16,27 +17,17 @@ body {
     display: flex;
 }
 
-.fd-row {
-    flex-direction: row;
-}
-.ml-2p {
-    margin-left: 2%;
-}
-.mr-100 {
+.mr-8p {
     margin-right: 8%;
-    @media (max-width: 768px) {
-        margin-right: 0px;
-    }   
 }
 
-.ml-23 {
+.ml-23p {
     margin-left: 23%;
 }
 
 .mb-25 {
     margin-bottom: 25px;
 }
-
 
 .mb-40 {
     margin-bottom: 40px;
@@ -50,32 +41,28 @@ body {
     margin-bottom: 80px;
 }
 
-.h-835 {
-    height: 835px;
-}
-
-.bc-black {
-    background-color: black;
-}
-
-.jc-center {
+.justify-content-center {
     justify-content: center;
 }
 
-.fd-column{
+.flex-direction-column{
     flex-direction: column;
 }
 
-.mr-30 {
-    margin-right: 2%;
+.mr-3p {
+    margin-right: 3%;
 }
 
-.mr-73 {
+.w-95p {
+    width: 95%;
+}
+
+.mr-6p {
     margin-right: 6%;
 }
 
-.mt-100{
-    margin-top: 100px;
+.mb-45 {
+    margin-bottom: 45px;
 }
 
 .w-30p {
@@ -85,6 +72,7 @@ body {
 .mb-50 {
     margin-bottom: 50px;
 }
+
 .mb-70 {
     margin-bottom: 70px;
 }
@@ -93,11 +81,7 @@ body {
     margin-bottom: 100px;
 }
 
-.mt-51 {
-    margin-top: 51px;
-}
-
-.w-566 {
+.w-50p {
     width: 50%;
 }
 
@@ -105,70 +89,62 @@ body {
     padding-top: 30px;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
+
 .mb-240 {
     margin-bottom: 240px;
 }
 
-.ai-center {
+.align-items-center {
     align-items: center;
 }
 
-.fd-reverse-row {
+.flex-direction-reverse-row {
     flex-direction: row-reverse;
 }
 
-.mr-68 {
-    margin-right: 5%;
-}
-
-.logo-box {
-    @extend %logo-box;
-}
-
-
-
-.w-100p {
-    width: 100%;
+@mixin background-img($img) {
+    background-image: url("../../images/#{$img}.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @media (max-width: 768px) {
+        background-position: 75%;
+    }
 }
 
 .main-container {
-    background-image: url(../../images/banner.png);
-    height: 865px;
+    @include background-img("banner");
 }
 
 .main-container-catalog {
-    background-image: url(../../images/Morten_Harket.png);
-    height: 550px;
-    background-position: center;
-    @media (max-width: 768px) {
-        height: 600px;
-        background-position: 75%;
-        background-repeat: no-repeat;
-        background-size: cover; 
-    }
+    @include background-img("Morten_Harket");
 }
 
 header {
-    & ul {
+    .logo-box {
+        @extend %logo-box;
+    }
+    ul {
         @extend %horizontal-menu;
     }
-    & input {
+    input {
         @extend %search;
     }
     @media (max-width: 768px) {
-        flex-direction: column!important;
+        flex-direction: column;
         align-items: flex-start!important;
-        margin-bottom: 100px!important;
         margin-left: 2%;
         div {
             margin-bottom: 25px;
-            order: 1;
         }
         ul {
             order: 3;
-        }
-        ul li {
-            margin-bottom: 10px;
+            li {
+                margin-bottom: 10px;
+            }
         }
         input {
             margin-left: 0px!important;
@@ -178,62 +154,53 @@ header {
         }
     }
 }
+@mixin font-size-banner ($h1, $h3, $p) {
+    h1 {
+        font-size: $h1;
+    }
+    h3 {
+        font-size: h2;
+    }
+    p {
+        font-size: $p;
+    } 
+}
 
 .box-in-baner {
-    color: $white;
     font-weight: bold;
     flex-direction: column;
-    & h1 {
-        @extend %main-titel;
-        text-align: center;
+    text-align: center;
+    @include font-size-banner(60px, 30px, 18px);
+    h1 {
+        @extend %main-title;
     }
-    & h3 {
+    h3 {
         @extend %uppercase;
-        font-size: 30px;
-        text-align: center;
     }
-    & p {
-        font-size: 18px;
-        margin-top: 45px;
-        text-align: center;
-    }
-    & input {
+    input {
         @extend %email-input;
-        margin-top: 40px;
+    }
+    button {
+        @extend %access-btn;
     }
     @media (max-width: 768px) {
-        & h1 {
-            font-size: 30px;
-        }
-        & h3 {
-            font-size: 18px;
-        }
-        & p {
-            font-size: 12px;
-        }
-        & .input-container {
+        @include font-size-banner(30px, 18px, 12px);
+        .input-container {
             align-items: center;
             flex-direction: column;
         }
-        & input, button {
+        input, button {
             width: 80%;
             margin-right: 0px;
         }
 
-    }
-    & button {
-        @extend %access-btn;
-        margin-top: 30px;
     }
 }
 
 .footer {
     @extend %footer;
     @media (max-width: 768px) {
-        .menu1 {
-            flex-direction: column;
-        }
-        .menu2 {
+        .menu1, .menu2 {
             flex-direction: column;
         }
         li {
@@ -242,39 +209,37 @@ header {
     }
 }
 
+@mixin subscribe-img ($img-num) {
+    background: url("../../images/subscribe_#{$img-num}.png");
+    background-repeat: no-repeat;
+    @media (max-width: 768px) {
+        background-size: 100%!important;
+    }
+}
+
 .subscribe {
-    background-color: black;
-    & div .subscribe-box {
-        @extend %subscribe-box;
-    }
-    & div .one {
-        background: url("../../images/subscribe_1.png");
-        background-repeat: no-repeat;
-    }
-    & div .two {
-        background: url("../../images/subscribe_2.png");
-        background-repeat: no-repeat;
-    }
-    & div .three {
-        background: url("../../images/subscribe_3.png");
-        background-repeat: no-repeat;
-    }
-    & .one, .two, .three {
-        @media (max-width: 768px) {
-            background-size: 100%!important;
+    div {
+        .subscribe-box {
+            @extend %subscribe-box;
+        }
+        .one {
+            @include subscribe-img(1)
+        }
+        .two {
+            @include subscribe-img(2)
+        }
+        .three {
+            @include subscribe-img(3)
         }
     }
 
-    & .h2-title {
-        @extend %minor-titels;
+    .h2-title {
+        @extend %minor-titles;
     }
-    & p {
-        color: $white;
+
+    p {
         text-align: center;
         font-size: 22px;
-    }
-    .rate-info {
-        width: 95%;
     }
     @media (max-width: 768px) {
         .rate-info {
@@ -287,7 +252,7 @@ header {
                 width: 90%;
                 margin-right: 0px;
                 margin-bottom: 50px;
-                & h2 {
+                h2 {
                     font-size: 16px;
                 }
             }
@@ -298,17 +263,15 @@ header {
 
 
 .box {
-    & .h2-title {
-        @extend %minor-titels;
+    .h2-title {
+        @extend %minor-titles;
     }
-    & .artist-box {
+    .artist-box {
         @extend %artist-box;
     }
-    & .mob-app {
+    .mob-app {
         @extend %mob-app;
     }
-
-  
 
     @media (max-width: 768px) {
         .h2-title {
@@ -320,7 +283,7 @@ header {
                 margin-right: 0px;
                 margin-bottom: 20px;
             }
-            & .album button {
+            .album button {
                 width: 100%;
             }
         }
@@ -328,14 +291,14 @@ header {
             flex-direction: column;
             width: 80%;
             align-items: center;
-            & .mob-img {
+            .mob-img {
                 order: 1;
             }
-            & .mob-app-text {
+            .mob-app-text {
                 order: 2;
                 width: 100%;
                 margin-right: 0px;
-                & button {
+                button {
                     width: 100%;
                 }
             }
@@ -348,33 +311,27 @@ header {
     margin-right: 3%;
 }
 
-.mb-100 {
-    margin-bottom: 100px;
+@mixin title-artist-btn($btn-type) {
+    @extend %catalog-btn;
+    background: $btn-type;
+    &:hover {
+        background: darken($btn-type, 10%);
+    }
 }
 
 .title-artist {
-    color: $white;
     font-size: 18px;
-    margin-top: 45px;
     font-weight: bold;
-
     h1 {
-        @extend %main-titel;
+        @extend %main-title;
     }
-    & .play-btn {
-        @extend %catalog-btn;
-        background: $mix-btn;
-        &:hover {
-            background: darken($mix-btn, 10%);
-        }
+    .play-btn {
+       @include title-artist-btn($mix-btn)
     }
-    & .favourites-btn {
-        @extend %catalog-btn;
-        background: $favourites-btn;
-        &:hover {
-            background: darken($favourites-btn, 10%);
-        }
+    .favourites-btn {
+        @include title-artist-btn($favourites-btn);
     }
+
     @media (max-width: 768px) {
         h1 {
             font-size: 30px;
@@ -393,16 +350,12 @@ header {
         .btn-container {
             flex-direction: column!important;
         }
-        .mix {
-            margin-left: 5%;
-            margin-top: 3%;
-        }
     }
 }
 
 .catalog-main-container {
-    .minor-titel {
-        @extend %minor-titels;
+    .minor-title {
+        @extend %minor-titles;
     }
     .tracks {
         div {
@@ -424,8 +377,7 @@ header {
         .tracks {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            width: 90%;
+            width: 95%;
         }
   
         .albums, .similar-artists {
@@ -433,13 +385,13 @@ header {
             grid-template-columns: repeat(2, 1fr);
             grid-auto-rows: repeat(3, auto);
             grid-gap: 25px 5%;
-            & div {
+            div {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
-            & div .album-img-container .group {
+            .group {
                 height: 20px;
                 top: 85%;
             }
@@ -448,31 +400,31 @@ header {
 
     @media (max-width: 425px) {
         .albums, .similar-artists {
-            & div img {
-                height: 130px;
+            div  {
+                img {
+                    height: 130px;
+                }
+                .group {
+                    height: 20px;
+                    top: 80%;
+                }
             }
-            & div .album-img-container .group {
-                height: 20px;
-                top: 80%;
-            }
-         }
+        }
     }
+}
+@mixin grid ($col-amount, $col-size, $rows-amount, $gapx, $gapy){
+    display: grid;
+    grid-template-columns: repeat($col-amount, $col-size);
+    grid-auto-rows: repeat($rows-amount, auto);
+    grid-gap: $gapx $gapy;
 }
 
 .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 47%);
-    grid-auto-rows: repeat(4, auto);
-    grid-gap: 25px 5%;
+    @include grid(2, 47%, 4, 25px, 5%);
 }
 
-
-
 .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 20%);
-    grid-auto-rows: repeat(2, auto);
-    grid-gap: 50px 5%;
+    @include grid(4, 20%, 2, 50px, 5%);
     @media (max-width: 1024px) {
         display: grid;
         grid-template-columns: repeat(3, 30%);
