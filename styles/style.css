@@ -381,6 +381,14 @@ body {
   display: flex;
 }
 
+@media (min-width: 1280px) {
+  .max-width-1200 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -421,8 +429,15 @@ body {
   margin-right: 3%;
 }
 
-.w-95p {
-  width: 95%;
+@media (max-width: 1280px) {
+  .w-95p {
+    width: 95%;
+  }
+}
+@media (min-width: 1280px) {
+  .w-95p {
+    max-width: 1280px;
+  }
 }
 
 .w-100p {
