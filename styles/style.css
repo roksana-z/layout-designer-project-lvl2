@@ -92,7 +92,7 @@ header input {
 }
 .footer hr {
   margin-top: 100px;
-  width: 100%;
+  width: 99%;
 }
 .footer .menu2 {
   display: flex;
@@ -375,6 +375,7 @@ header input {
 
 body {
   background-color: black;
+  width: 100%;
 }
 
 .d-flex {
