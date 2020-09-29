@@ -25,10 +25,10 @@
     font-weight: bold;
     font-size: 11px;
     list-style-type: none;
-    & li {
+    li {
         margin-right: 10%;
     }
-    & a {
+    a {
         color: $light-grey;
         @extend %a-hover;
     }
