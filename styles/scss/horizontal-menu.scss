@@ -1,0 +1,11 @@
+.horizontal-menu {
+  display: flex;
+  list-style-type: none;
+  .menu-link {
+    color: $light-grey;
+    @extend %a-hover;
+  }
+}
+
+
+

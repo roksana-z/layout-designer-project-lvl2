@@ -1,0 +1,11 @@
+.catalog-btn {
+    @include input-and-btn(50px, unset, 0px);
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    text-decoration: none;
+    border-style: unset;
+    .img {
+      margin: 0% 9%;
+    }
+  }

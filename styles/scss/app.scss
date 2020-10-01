@@ -1,484 +1,293 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 @import "./variables.scss";
 @import "./atomic.scss";
+@import "./subscribe.scss";
+@import "./news_and_app.scss";
+@import "./horizontal-menu.scss";
+@import "./atomic2.scss";
+@import "./catalog-btn.scss";
+@import "./tracks.scss";
+@import "./albums.scss";
 
-*{
-    font-family: 'Roboto', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    color: $white;
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: $white;
 }
 
 body {
-    background-color: black;
-    width: 100%;
+  background-color: black;
+  width: 100%;
 }
 
-.d-flex {
-    display: flex;
+%a-hover {
+  text-decoration: none;
+  &:hover {
+    color: $white;
+  }
 }
 
-.max-width-1200 {
-    @media (min-width: 1280px) {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        
-    }
+.a-hover {
+  @extend %a-hover;
 }
 
-.uppercase {
-    text-transform: uppercase;
-}
-
-.mr-8p {
-    margin-right: 8%;
-}
-
-.ml-23p {
-    margin-left: 23%;
-}
-
-.mb-25 {
-    margin-bottom: 25px;
-}
-
-.mb-40 {
-    margin-bottom: 40px;
-}
-
-.pl-2p {
-    padding-left: 2%;
-}
-
-.mb-80 {
-    margin-bottom: 80px;
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.flex-direction-column{
-    flex-direction: column;
-}
-
-.mr-3p {
-    margin-right: 3%;
+.link {
+  color: $light-grey;
+  @extend %a-hover;
 }
 
 
-.w-95p {
-    @media (max-width: 1280px){
-        width: 95%;
-    };
-    @media (min-width: 1280px) {
-        max-width: 1280px;
-    }
-}
-
-.w-100p {
-    width: 100%;
-}
-
-.mr-6p {
-    margin-right: 6%;
-}
-
-.mb-45 {
-    margin-bottom: 45px;
-}
-
-.w-30p {
-    width: 30%;
-}
-
-.mb-50 {
-    margin-bottom: 50px;
-}
-
-.pb-76 {
-    padding-bottom: 76px;
-}
-
-.mb-70 {
-    margin-bottom: 70px;
-}
-
-.mb-100 {
-    margin-bottom: 100px;
-}
-
-.w-50p {
-    width: 50%;
-}
-
-.pt-30 {
-    padding-top: 30px;
-}
-
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-.mb-240 {
-    margin-bottom: 240px;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.flex-direction-reverse-row {
-    flex-direction: row-reverse;
+.main-title {
+  text-transform: uppercase;
+  font-size: 60px;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 @mixin background-img($img) {
-    background-image: url("../../images/#{$img}.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    @media (max-width: 768px) {
-        background-position: 75%;
-    }
+  background-image: url("../../images/#{$img}.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 768px) {
+    background-position: 75%;
+  }
 }
 
-.main-container {
-    @include background-img("banner");
+@mixin input-and-btn($h, $bc, $br) {
+  background: $bc;
+  border-radius: $br;
+  border-style: unset;
+  height: $h;
 }
 
-.main-container-catalog {
-    @include background-img("Morten_Harket");
+.bg-guitar {
+  @include background-img("banner");
 }
 
-header {
-    .logo-box {
-        @extend %logo-box;
-    }
-    ul {
-        @extend %horizontal-menu;
-    }
-    input {
-        @extend %search;
-    }
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start!important;
-        margin-bottom: 70px!important;
-        div {
-            margin-bottom: 25px;
-        }
-        ul {
-            order: 3;
-        }
-        input {
-            margin-left: 0px!important;
-            margin-bottom: 25px;
-            order: 2;
-            width: 87%;
-        }
-    }
-}
-@mixin font-size-banner ($h1, $h3, $p) {
-    h1 {
-        font-size: $h1;
-    }
-    h3 {
-        font-size: h2;
-    }
-    p {
-        font-size: $p;
-    } 
-}
-
-.box-in-baner {
-    font-weight: bold;
-    flex-direction: column;
-    text-align: center;
-    @include font-size-banner(60px, 30px, 18px);
-    h1 {
-        @extend %main-title;
-    }
-    input {
-        @extend %email-input;
-    }
-    button {
-        @extend %access-btn;
-    }
-    @media (max-width: 768px) {
-        @include font-size-banner(30px, 18px, 12px);
-        .input-container {
-            align-items: center;
-            flex-direction: column;
-        }
-        input, button {
-            width: 80%;
-            margin-right: 0px;
-            margin-bottom: 30px;
-        }
-    }
-}
-
-.footer {
-    @extend %footer;
-    @media (max-width: 768px) {
-        .menu1, .menu2 {
-            flex-direction: column;
-        }
-        li {
-            margin-bottom: 20px;
-        }
-    }
-}
-
-@mixin subscribe-img ($img-num) {
-    background: url("../../images/subscribe_#{$img-num}.png");
-    background-repeat: no-repeat;
-    @media (max-width: 768px) {
-        background-size: 100%!important;
-    }
+.bg-Morten {
+  @include background-img("Morten_Harket");
 }
 
 .h2-title {
-    @extend %minor-titles;
-}
-
-.subscribe {
-    div {
-        .subscribe-box {
-            @extend %subscribe-box;
-        }
-        .one {
-            @include subscribe-img(1)
-        }
-        .two {
-            @include subscribe-img(2)
-        }
-        .three {
-            @include subscribe-img(3)
-        }
-    }
-
-    p {
-        text-align: center;
-        font-size: 22px;
-    }
+    text-transform: uppercase;
+    font-size: 38px;
     @media (max-width: 768px) {
-        .rate-info {
-            font-size: 12px;
-        }
-        .subscribe-container {
-            flex-direction: column;
-            align-items: center;
-            .subscribe-box {
-                width: 90%;
-                margin-right: 0px;
-                margin-bottom: 50px;
-                h2 {
-                    font-size: 16px;
-                }
-            }
-        }
+        font-size: 20px;
     }
-
 }
 
-@mixin column {
+.search {
+  @include input-and-btn(26px, #3c3b3d, 50px);
+}
+
+
+@mixin font-size-banner ($h1, $h3, $p) {
+  h1 {
+      font-size: $h1;
+  }
+  h3 {
+      font-size: h2;
+  }
+  p {
+      font-size: $p;
+  } 
+}
+
+
+
+.baner-input {
+  @include input-and-btn ( 50px, $input-color, 3px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.access-btn {
+  @include input-and-btn( 50px, $green, 0px);
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+      background: darken($green, 10%);
+      cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  //footer 
+  .menu1,
+  .menu2 {
     flex-direction: column;
-    width: 80%;
-    align-items: center;
+  }
+  .menu-item {
+    margin-bottom: 20px;
+  }
+  .footer-h2 {
+    margin-top: 40px;
+  }
+  //header 
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start !important;
+    margin-bottom: 70px !important;
+  }
+  .horizontal-menu {
+    order: 3;
+    flex-direction: column;
+  }
+  .menu-item {
+    margin-bottom: 10px;
+  }
+  .logo-box {
+    margin-bottom: 25px;
+  }
+  .search {
+    margin-left: 0px !important;
+    margin-bottom: 25px;
+    order: 2;
+    width: 87%!important;
+  }
+  //baner
+  .baner {
+      @include font-size-banner(30px, 18px, 12px);
+  }
+  .input-container {
+      align-items: center;
+      flex-direction: column;
+  }
+  .baner-input, .access-btn {
+      width: 80%;
+      margin-right: 0px!important;
+      margin-bottom: 30px;
+  }
 }
 
-.box {
-    .h2-title {
-        @extend %minor-titles;
-    }
-    .artist-box {
-        @extend %artist-box;
-    }
-    .mob-app {
-        @extend %mob-app;
-    }
-
-    @media (max-width: 768px) {
-        .h2-title {
-            font-size: 20px;
-            margin-top: 45px;
-        }
-        .artist-box {
-            @include column();
-            .artist {
-                margin-right: 0px;
-                margin-bottom: 20px;
-                width: 100%;
-            }
-            .album {
-                width: 100%;
-                button {
-                    width: 100%;
-                }
-            }
-        }
-        .mob-app {
-            @include column();
-            .mob-img {
-                order: 1;
-            }
-            .mob-app-text {
-                order: 2;
-                width: 100%;
-                margin-right: 0px;
-                button {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
+.orange {
+  background-color: $dark-orange;
+  &:hover {
+    background: darken($dark-orange, 10%);
+  }
 }
 
-.mr-3p {
-    margin-right: 3%;
+.purple {
+  background-color: $purple;
+  &:hover {
+    background: darken($purple, 10%);
+  }
 }
 
-@mixin title-artist-btn($btn-type) {
-    @extend %catalog-btn;
-    background: $btn-type;
-    &:hover {
-        background: darken($btn-type, 10%);
-    }
+.minor-titles {
+  text-transform: uppercase;
+  font-size: 38px;
+  @media (max-width: 768px) {
+      font-size: 20px;
+  }
 }
 
-.title-artist {
-    font-size: 18px;
-    font-weight: bold;
-    h1 {
-        @extend %main-title;
-    }
-    .play-btn {
-       @include title-artist-btn($mix-btn)
-    }
-    .favourites-btn {
-        @include title-artist-btn($favourites-btn);
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 30px;
-        }
-        p {
-            font-size: 14px;
-        }
-        .play-btn {
-            width: 90%;
-            margin-bottom: 25px;
-        }
-        .favourites-btn {
-           width: 90%;
-           margin-left: 0px;
-        }
-        .btn-container {
-            flex-direction: column!important;
-        }
-    }
-}
-
-.catalog-main-container {
-    .minor-title {
-        @extend %minor-titles;
-    }
-    .tracks {
-        div {
-            @extend %track;
-        }
-    }
-    .albums {
-        div {
-            @extend %album;
-        }
-    }
-    .similar-artists {
-        div {
-            @extend %album;
-            .album-data {
-                display: flex;
-                align-items: center;
-            }
-        }
-    }
-
-    @media (max-width: 768px) {
-        
-        .tracks {
-            display: flex;
-            flex-direction: column;
-            width: 95%;
-        }
-  
-        .albums, .similar-artists {
-            display: grid;
-            grid-template-columns: repeat(2, 40%);
-            grid-auto-rows: repeat(3, auto);
-            grid-gap: 25px 7%;
-            justify-content: center;
-            div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            img {
-                height: 180px;
-            }
-            .group {
-                height: 20px;
-                top: 85%;
-            }
-        }
-    }
-
-    @media (max-width: 425px) {
-        .album-img-container, .similar-artists {
-            img {
-                height: 130px;
-            }
-            .group {
-                height: 20px!important;
-                top: 80%!important;
-            }
-            .album-name, .album-date {
-                font-size: 12px!important;
-            }
-  
-        }
-        .albums {
-             div {
-                justify-content: flex-start!important;
-                align-items: flex-start!important;
-             }
-            
-        }
-        .similar-artists {
-            justify-content: center;
-        }
-    }
-}
-@mixin grid ($col-amount, $col-size, $rows-amount, $gapx, $gapy){
-    display: grid;
-    grid-template-columns: repeat($col-amount, $col-size);
-    grid-auto-rows: repeat($rows-amount, auto);
-    grid-gap: $gapx $gapy;
+@mixin grid($col-amount, $col-size, $rows-amount, $gapx, $gapy) {
+  display: grid;
+  grid-template-columns: repeat($col-amount, $col-size);
+  grid-auto-rows: repeat($rows-amount, auto);
+  grid-gap: $gapx $gapy;
 }
 
 .grid-2 {
-    @include grid(2, 47%, 4, 25px, 5%);
+  @include grid(2, 47%, 4, 25px, 5%);
 }
 
 .grid-4 {
-    @include grid(4, 20%, 2, 50px, 5%);
-    @media (max-width: 1024px) {
-        display: grid;
-        grid-template-columns: repeat(3, 30%);
-    }
+  @include grid(4, 20%, 2, 50px, 5%);
+
 }
+
+@media (max-width: 1024px) {
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+  }
+}
+
+@media (max-width: 768px) {
+  //catalog-baner
+  .main-title {
+    font-size: 30px;
+  }
+  .fans {
+    font-size: 14px;
+  }
+  .catalog-btn {
+    width: 90%;
+    margin-bottom: 25px;
+    margin-left: 0px;
+  }
+  .btn-container {
+    flex-direction: column !important;
+  }
+  //tracks
+  .tracks {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  //albums
+  .albums,
+  .similar-artists {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-auto-rows: repeat(3, auto);
+    grid-gap: 25px 6%;
+    justify-content: center;
+  }
+  .album-name{ 
+    margin-bottom: 0px;
+  }
+  .album-img-container,
+  .album-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 15px!important;
+  }
+  .album,
+  .date {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .album-img,
+  .artists-img {
+    height: 180px;
+  }
+  .group {
+    height: 20px;
+    top: 85%;
+  }
+}
+
+@media (max-width: 425px) {
+  .album-img,
+  .artists-img {
+      height: 130px;
+    }
+  .group {
+    height: 20px !important;
+    top: 80% !important;
+  }
+  .album-name,
+  .album-date {
+    font-size: 12px !important;
+  }
+  .album{
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  .album,
+  .date {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .similar-artists {
+    justify-content: center;
+  }
+}
+

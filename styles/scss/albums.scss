@@ -1,0 +1,31 @@
+.album-img-container {
+    position: relative;
+}
+
+.group {
+    position: absolute;
+    height: 25px;
+    top: 85%;
+    left: 4%;
+}
+
+.album-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.album-date {
+    font-size: 16px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+.album-name {
+font-weight: bold;
+font-size: 20px;
+margin-bottom: 10px;
+@media (max-width: 768px) {
+    font-size: 16px;
+}
+}
