@@ -329,7 +329,7 @@ h1 {
 }
 
 .active {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .bg-guitar {
