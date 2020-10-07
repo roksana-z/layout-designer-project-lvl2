@@ -1,11 +1,20 @@
 .horizontal-menu {
   display: flex;
   list-style-type: none;
-  .menu-link {
-    color: $light-grey;
-    @extend %a-hover;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.menu-link {
+  color: $light-grey;
+  @extend %a-hover;
+  &:hover {
+    color: $white;
   }
 }
 
-
-
+@media (max-width: 768px) {
+  .menu-item {
+    margin-bottom: 20px;
+  }
+}

@@ -1,19 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-@import "./variables.scss";
-@import "./atomic.scss";
-@import "./subscribe.scss";
-@import "./news_and_app.scss";
-@import "./horizontal-menu.scss";
-@import "./atomic2.scss";
-@import "./catalog-btn.scss";
-@import "./tracks.scss";
-@import "./albums.scss";
-
 * {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
   color: $white;
+}
+
+@mixin input-and-btn($h, $bc, $br) {
+  background: $bc;
+  border-radius: $br;
+  border-style: unset;
+  height: $h;
 }
 
 body {
@@ -37,8 +33,7 @@ body {
   @extend %a-hover;
 }
 
-
-.main-title {
+h1 {
   text-transform: uppercase;
   font-size: 60px;
   @media (max-width: 768px) {
@@ -56,11 +51,8 @@ body {
   }
 }
 
-@mixin input-and-btn($h, $bc, $br) {
-  background: $bc;
-  border-radius: $br;
-  border-style: unset;
-  height: $h;
+.active {
+  color: $white;
 }
 
 .bg-guitar {
@@ -71,116 +63,56 @@ body {
   @include background-img("Morten_Harket");
 }
 
-.h2-title {
-    text-transform: uppercase;
-    font-size: 38px;
-    @media (max-width: 768px) {
-        font-size: 20px;
-    }
+h2 {
+  text-transform: uppercase;
+  font-size: 38px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 
 .search {
   @include input-and-btn(26px, #3c3b3d, 50px);
 }
 
-
-@mixin font-size-banner ($h1, $h3, $p) {
+@mixin font-size-banner($h1, $h3, $p) {
   h1 {
-      font-size: $h1;
+    font-size: $h1;
   }
   h3 {
-      font-size: h2;
+    font-size: h2;
   }
   p {
-      font-size: $p;
-  } 
+    font-size: $p;
+  }
 }
 
-
-
 .baner-input {
-  @include input-and-btn ( 50px, $input-color, 3px);
+  @include input-and-btn(50px, $input-color, 3px);
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .access-btn {
-  @include input-and-btn( 50px, $green, 0px);
+  @include input-and-btn(50px, $green, 0px);
   text-transform: uppercase;
   font-weight: bold;
   &:hover {
-      background: darken($green, 10%);
-      cursor: pointer;
-  }
-}
-
-@media (max-width: 768px) {
-  //footer 
-  .menu1,
-  .menu2 {
-    flex-direction: column;
-  }
-  .menu-item {
-    margin-bottom: 20px;
-  }
-  .footer-h2 {
-    margin-top: 40px;
-  }
-  //header 
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start !important;
-    margin-bottom: 70px !important;
-  }
-  .horizontal-menu {
-    order: 3;
-    flex-direction: column;
-  }
-  .menu-item {
-    margin-bottom: 10px;
-  }
-  .logo-box {
-    margin-bottom: 25px;
-  }
-  .search {
-    margin-left: 0px !important;
-    margin-bottom: 25px;
-    order: 2;
-    width: 87%!important;
-  }
-  //baner
-  .baner {
-      @include font-size-banner(30px, 18px, 12px);
-  }
-  .input-container {
-      align-items: center;
-      flex-direction: column;
-  }
-  .baner-input, .access-btn {
-      width: 80%;
-      margin-right: 0px!important;
-      margin-bottom: 30px;
+    background: darken($green, 10%);
+    cursor: pointer;
   }
 }
 
 .orange {
-  background-color: $dark-orange;
+  background: $dark-orange !important;
   &:hover {
     background: darken($dark-orange, 10%);
   }
 }
 
 .purple {
-  background-color: $purple;
+  background-color: $purple !important;
   &:hover {
     background: darken($purple, 10%);
-  }
-}
-
-.minor-titles {
-  text-transform: uppercase;
-  font-size: 38px;
-  @media (max-width: 768px) {
-      font-size: 20px;
   }
 }
 
@@ -197,97 +129,117 @@ body {
 
 .grid-4 {
   @include grid(4, 20%, 2, 50px, 5%);
-
 }
 
 @media (max-width: 1024px) {
+  .w-lg-250 {
+    width: 250px;
+  }
   .grid-4 {
     display: grid;
     grid-template-columns: repeat(3, 30%);
   }
+  .h-lg-230 {
+    height: 230px;
+  }
 }
 
 @media (max-width: 768px) {
-  //catalog-baner
-  .main-title {
-    font-size: 30px;
-  }
-  .fans {
-    font-size: 14px;
-  }
-  .catalog-btn {
-    width: 90%;
-    margin-bottom: 25px;
-    margin-left: 0px;
-  }
-  .btn-container {
+  .flex-direction-md-column {
     flex-direction: column !important;
   }
-  //tracks
-  .tracks {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
+  .w-80p-md {
+    width: 80%;
   }
-  //albums
-  .albums,
-  .similar-artists {
-    display: grid;
-    grid-template-columns: repeat(2, 40%);
-    grid-auto-rows: repeat(3, auto);
-    grid-gap: 25px 6%;
-    justify-content: center;
+  .h-md-auto {
+    height: auto;
   }
-  .album-name{ 
-    margin-bottom: 0px;
+  .mr-md-0 {
+    margin-right: 0px;
   }
-  .album-img-container,
-  .album-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 15px!important;
-  }
-  .album,
-  .date {
+  .w-100p-md {
     width: 100%;
+  }
+  .mb-0-md {
+    margin-bottom: 0px !important;
+  }
+  .justify-md-space-between {
+    justify-content: space-between;
+  }
+  .mb-25-md {
+    margin-bottom: 25px;
+  }
+  .align-md-center {
+    align-items: center;
+  }
+  .justify-content-md-center {
+    justify-content: center;
+  }
+  .pt-70-md {
+    padding-top: 70px;
+  }
+  .pb-44-md {
+    padding-bottom: 44px;
+  }
+  .pt-md-20 {
+    padding-top: 20px;
+  }
+  .fs-md-14 {
+    font-size: 14px;
+  }
+  .fs-md-16 {
+    font-size: 14px;
+  }
+  .pt-md-100 {
+    padding-top: 100px;
+  }
+  .d-flex-md {
+    display: flex !important;
+  }
+  .w-md-180 {
+    width: 180px;
+  }
+  .align-md-start {
     align-items: flex-start;
   }
-  .album-img,
-  .artists-img {
-    height: 180px;
+  .pl-6p-md {
+    padding: 0% 6%;
   }
-  .group {
-    height: 20px;
-    top: 85%;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .horizontal-menu {
+    order: 3;
+  }
+  .search {
+    margin-left: 0px !important;
+    margin-bottom: 25px;
+    order: 2;
+    width: 87% !important;
+  }
+  .baner {
+    @include font-size-banner(30px, 18px, 12px);
+  }
+  .baner-input,
+  .access-btn {
+    width: 80%;
+    margin-right: 0px !important;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 425px) {
-  .album-img,
-  .artists-img {
-      height: 130px;
-    }
-  .group {
-    height: 20px !important;
-    top: 80% !important;
+  .w-xs-130 {
+    width: 130px;
   }
-  .album-name,
-  .album-date {
-    font-size: 12px !important;
+  .fs-xs-12 {
+    font-size: 12px;
   }
-  .album{
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-  }
-  .album,
-  .date {
-    align-items: flex-start;
-    width: 100%;
-  }
-  .similar-artists {
-    justify-content: center;
+  .mb-xs-160 {
+    margin-bottom: 160px;
   }
 }
-

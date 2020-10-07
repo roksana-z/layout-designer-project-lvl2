@@ -1,0 +1,72 @@
+.album-news {
+  display: flex;
+  flex-direction: column;
+  .album-data {
+    color: $light-grey;
+    font-size: 14px;
+    line-height: 35px;
+  }
+}
+
+.main-album-date {
+  align-items: center;
+  display: flex;
+  .music-box {
+    text-transform: uppercase;
+    color: $orange;
+    font-size: 12px;
+  }
+}
+
+.album-btn {
+  @include input-and-btn(50px, unset, 5px);
+  border: 1px solid #e9e9e9;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: $dark;
+  opacity: 1;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+}
+
+.pink-btn {
+  @include input-and-btn(56px, $pink, 50px);
+  border-color: $pink;
+  color: $white;
+  &:hover {
+    cursor: pointer;
+    background-color: $purple;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+    margin-top: 45px;
+  }
+  .artist {
+    margin-right: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .mob-img {
+    order: 1;
+  }
+  .mob-text-container {
+    width: 100% !important;
+    order: 2;
+  }
+}
+
+@media (max-width: 425px) {
+  .one,
+  .two,
+  .three {
+    background-size: auto !important;
+  }
+}

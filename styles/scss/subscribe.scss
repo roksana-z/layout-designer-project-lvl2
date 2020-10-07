@@ -1,74 +1,68 @@
 .subscribe-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 60px;
 }
 
 .subscribe-conditions {
-    font-size: 11px;
-    line-height: 13px;
-    text-align: center;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
 }
 
 .box-price {
-    display: flex;
-    align-items: flex-start;
-    .price {
-        font-size: 60px;
-    }
-    .rub {
-      line-height: 50px;
-      text-transform: uppercase;
-      font-size: 30px;
-      margin-left: 7%;
-    }
+  display: flex;
+  align-items: flex-start;
+  .price {
+    font-size: 60px;
+  }
+  .rub {
+    line-height: 50px;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-left: 7%;
+  }
 }
 
 .subscribe-btn {
-    @include input-and-btn(70px, unset, 0px);
-    border: 4px solid #ffffff;
-    font-size: 24px;
-    text-transform: uppercase;
-    opacity: 1;
-    &:hover {
-      cursor: pointer;
-      opacity: 0.6;
-    }
+  @include input-and-btn(70px, unset, 0px);
+  border: 4px solid #ffffff;
+  font-size: 24px;
+  text-transform: uppercase;
+  opacity: 1;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 
-@mixin subscribe-img ($img) {
-    background: url($img);
-    background-repeat: no-repeat;
-    @media (max-width: 768px) {
-        background-size: 100%!important;
-    }
+@mixin subscribe-img($img) {
+  background: url($img);
+  background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    background-size: 100% !important;
+  }
 }
-
 
 @media (max-width: 768px) {
-    .rate-info {
-        font-size: 12px;
-    }
-    .subscribe-container {
-        flex-direction: column;
-        align-items: center;
-        .subscribe-box {
-        width: 90%;
-        margin-right: 0px;
-        margin-bottom: 50px;
-        h2 {
-            font-size: 16px;
-        }
-        }
-    }
+  .subscribe-box {
+    width: 90%;
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+  .subscribe-btn {
+    height: 55px;
+  }
 }
 
 .one {
-    @include subscribe-img("../../images/subscribe_1.png");
-  }
+  @include subscribe-img("../../images/subscribe_1.png");
+}
 .two {
-    @include subscribe-img("../../images/subscribe_2.png");
+  @include subscribe-img("../../images/subscribe_2.png");
 }
 .three {
-    @include subscribe-img("../../images/subscribe_3.png");
+  @include subscribe-img("../../images/subscribe_3.png");
 }

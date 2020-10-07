@@ -1,11 +1,13 @@
 .catalog-btn {
-    @include input-and-btn(50px, unset, 0px);
-    display: flex;
-    text-transform: uppercase;
-    align-items: center;
-    text-decoration: none;
-    border-style: unset;
-    .img {
-      margin: 0% 9%;
-    }
+  @include input-and-btn(50px, initial, 0px);
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  text-decoration: none;
+  border-style: unset;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-left: 0px;
   }
+}
