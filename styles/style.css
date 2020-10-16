@@ -35,6 +35,10 @@
   font-size: 11px;
 }
 
+.fs-16 {
+  font-size: 16px;
+}
+
 .fs-18 {
   font-size: 18px;
 }
@@ -263,6 +267,10 @@
   height: 60px;
 }
 
+.pb-50 {
+  padding-bottom: 50px;
+}
+
 .justify-contentspace-beetwen {
   justify-content: space-between;
 }
@@ -295,16 +303,32 @@
   height: 180px;
 }
 
-* {
+body, footer, hr, ul {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
   color: #FFFFFF;
 }
 
+@media (min-width: 1280px) {
+  .max-width-1200 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 body {
   background-color: black;
   width: 100%;
+}
+
+ul {
+  padding-inline-start: unset;
+}
+
+button, a {
+  color: #FFFFFF;
 }
 
 .menu-link, .link, .a-hover {
@@ -366,6 +390,32 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: 16px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #CACACA;
+}
+
 .search {
   background: #3c3b3d;
   border-radius: 50px;
@@ -406,6 +456,13 @@ h2 {
 }
 .purple:hover {
   background: #3e1e78;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 27%);
+  grid-auto-rows: repeat(1, auto);
+  grid-gap: 0 6%;
 }
 
 .grid-2 {
@@ -586,7 +643,7 @@ h2 {
   font-size: 60px;
 }
 .box-price .rub {
-  line-height: 50px;
+  line-height: 0px;
   text-transform: uppercase;
   font-size: 30px;
   margin-left: 7%;

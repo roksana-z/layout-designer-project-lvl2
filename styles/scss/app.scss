@@ -1,4 +1,4 @@
-* {
+body, footer, hr, ul {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
@@ -12,9 +12,26 @@
   height: $h;
 }
 
+.max-width-1200 {
+    @media (min-width: 1280px) {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
 body {
   background-color: black;
   width: 100%;
+}
+
+ul {
+  padding-inline-start: unset;
+}
+
+button, a {
+  color: $white;
 }
 
 %a-hover {
@@ -71,6 +88,28 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: $light-grey;
+}
+
 .search {
   @include input-and-btn(26px, #3c3b3d, 50px);
 }
@@ -121,6 +160,10 @@ h2 {
   grid-template-columns: repeat($col-amount, $col-size);
   grid-auto-rows: repeat($rows-amount, auto);
   grid-gap: $gapx $gapy;
+}
+
+.grid-3 {
+  @include grid(3, 27%, 1, 0, 6%);
 }
 
 .grid-2 {
