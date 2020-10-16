@@ -279,6 +279,10 @@
   position: relative;
 }
 
+.py-2p {
+  padding: 0 2% 0 2%;
+}
+
 .mt-50 {
   margin-top: 50px;
 }
@@ -534,6 +538,10 @@ h5 {
     justify-content: center;
   }
 
+  .justify-content-md-start {
+    justify-content: start !important;
+  }
+
   .pt-70-md {
     padding-top: 70px;
   }
@@ -572,6 +580,14 @@ h5 {
 
   .pl-6p-md {
     padding: 0% 6%;
+  }
+
+  .py-md-33 {
+    padding: 0 16% 0 16%;
+  }
+
+  .pl-md-4p {
+    padding-left: 4%;
   }
 }
 @media (max-width: 768px) {
@@ -619,6 +635,10 @@ h5 {
 
   .mb-xs-160 {
     margin-bottom: 160px;
+  }
+
+  .py-xs-0 {
+    padding: 0%;
   }
 }
 .subscribe-box {
@@ -872,7 +892,6 @@ h5 {
     grid-auto-rows: repeat(3, auto);
     grid-gap: 25px 6%;
     justify-content: center;
-    padding: 0% !important;
   }
 
   .group {
