@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 25px;
   padding-bottom: 60px;
+  padding: 0 7% 60px 7%;
 }
 
 .subscribe-conditions {
@@ -48,7 +48,6 @@
 
 @media (max-width: 768px) {
   .subscribe-box {
-    width: 90%;
     margin-right: 0px;
     margin-bottom: 50px;
   }
@@ -56,6 +55,7 @@
     height: 55px;
   }
 }
+
 
 .one {
   @include subscribe-img("../../images/subscribe_1.png");

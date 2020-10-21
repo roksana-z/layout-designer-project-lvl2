@@ -88,26 +88,13 @@ h2 {
   }
 }
 
-h3 {
-  font-size: 30px;
-  text-transform: uppercase;
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-}
 
-h4 {
+h3 {
   font-size: 24px;
   text-transform: uppercase;
   @media (max-width: 768px) {
     font-size: 16px;
   }
-}
-
-h5 {
-  font-size: 18px;
-  font-weight: bold;
-  color: $light-grey;
 }
 
 .search {
@@ -155,7 +142,7 @@ h5 {
   }
 }
 
-@mixin grid($col-amount, $col-size, $rows-amount, $gapx, $gapy) {
+@mixin grid($col-amount, $col-size, $rows-amount, $gapy, $gapx) {
   display: grid;
   grid-template-columns: repeat($col-amount, $col-size);
   grid-auto-rows: repeat($rows-amount, auto);
@@ -163,15 +150,15 @@ h5 {
 }
 
 .grid-3 {
-  @include grid(3, 27%, 1, 0, 6%);
+  @include grid(3, 27%, 1, 6%, 0PX);
 }
 
 .grid-2 {
-  @include grid(2, 47%, 4, 25px, 5%);
+  @include grid(2, 47%, 4, 5%, 25px);
 }
 
 .grid-4 {
-  @include grid(4, 20%, 2, 50px, 5%);
+  @include grid(4, 20%, 2, 5%, 50px);
 }
 
 @media (max-width: 1024px) {
@@ -184,6 +171,15 @@ h5 {
   }
   .h-lg-230 {
     height: 230px;
+  }
+  .mb-0-lg {
+    margin-bottom: 0;
+  }
+  .w-lg-30p {
+    width: 30%;
+  }
+  .align-items-lg-center {
+    align-items: center;
   }
 }
 

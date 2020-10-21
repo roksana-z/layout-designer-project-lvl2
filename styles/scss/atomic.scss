@@ -77,8 +77,24 @@
   margin-left: 23%;
 }
 
+.h-auto {
+  height: auto;
+}
+
+.max-width-100p {
+  max-width: 100%;
+}
+
+.h-min-content {
+  height: min-content;
+}
+
 .mb-20 {
   margin-bottom: 20px;
+}
+
+.d-block {
+  display: block;
 }
 
 .mb-25 {
@@ -87,6 +103,10 @@
 
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.pb-240 {
+  padding-bottom: 240px;
 }
 
 .pl-2p {
