@@ -47,8 +47,12 @@
   margin-right: 8%;
 }
 
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
 .h-17 {
-  height: 17px;
+  height: 20px;
 }
 
 .mr-10p {
@@ -93,6 +97,14 @@
 
 .h-min-content {
   height: min-content;
+}
+
+.clr-white {
+  color: #FFFFFF;
+}
+
+.mt-50 {
+  margin-top: 50px;
 }
 
 .mb-20 {
@@ -287,6 +299,10 @@
   width: 68%;
 }
 
+.w-88 {
+  width: 88px;
+}
+
 .h-60 {
   height: 60px;
 }
@@ -331,7 +347,7 @@
   height: 180px;
 }
 
-body, footer, hr, ul {
+body, footer, hr, ul, h1 {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;

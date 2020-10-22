@@ -45,9 +45,12 @@
 .mr-8p {
   margin-right: 8%;
 }
+.no-wrap {
+  flex-wrap: nowrap;
+}
 
 .h-17 {
-  height: 17px;
+  height: 20px;
 }
 
 .mr-10p {
@@ -89,8 +92,18 @@
   display: block;
 }
 
+
+
 .h-min-content {
   height: min-content;
+}
+
+.clr-white {
+  color: $white;
+}
+
+.mt-50 {
+  margin-top: 50px;
 }
 
 .mb-20 {
@@ -282,6 +295,10 @@
   width: 68%;
 }
 
+.w-88 {
+  width: 88px;;
+}
+
 .h-60 {
   height: 60px;
 }
@@ -289,6 +306,7 @@
 .pb-50 {
   padding-bottom: 50px;
 }
+
 
 .justify-contentspace-beetwen {
   justify-content: space-between;
