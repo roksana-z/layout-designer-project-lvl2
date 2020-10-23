@@ -303,6 +303,10 @@
   width: 88px;
 }
 
+.mt-0 {
+  margin-top: 0;
+}
+
 .h-60 {
   height: 60px;
 }
@@ -351,7 +355,7 @@
   height: 180px;
 }
 
-body, footer, hr, ul, h1 {
+body, footer, hr, ul, h1, h3 {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
@@ -440,7 +444,6 @@ h2 {
 
 h3 {
   font-size: 24px;
-  text-transform: uppercase;
 }
 @media (max-width: 768px) {
   h3 {
@@ -694,7 +697,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   padding-bottom: 60px;
-  padding: 0 7% 60px 7%;
+  padding: 24px 7% 60px 7%;
 }
 
 .subscribe-conditions {

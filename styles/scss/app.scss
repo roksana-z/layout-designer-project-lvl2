@@ -1,4 +1,4 @@
-body, footer, hr, ul, h1 {
+body, footer, hr, ul, h1, h3 {
   font-family: "Roboto", sans-serif;
   margin: 0px;
   padding: 0px;
@@ -91,7 +91,6 @@ h2 {
 
 h3 {
   font-size: 24px;
-  text-transform: uppercase;
   @media (max-width: 768px) {
     font-size: 16px;
   }
